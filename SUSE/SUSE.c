@@ -1,26 +1,30 @@
 #include "SUSE.h"
 
 int main() {
-	int cliente_fd;
-	pthread_t hilo_clientes, hilo_metricas;
+//	int cliente_fd;
+//	pthread_t hilo_clientes;
+	pthread_t hilo_metricas;
 
 	inicializar();
 	configurar();
-	int servidor_fd = iniciar_servidor();
+//	int servidor_fd = iniciar_servidor();
+	servidor_iniciar();
 
 	pthread_create(&hilo_metricas, NULL, logear_metricas, NULL);
 
-	while(1) {
-		cliente_fd = esperar_cliente(servidor_fd);
-		pthread_create(&hilo_clientes, NULL, atender_cliente, cliente_fd);
-	}
+//	while(1) {
+//		cliente_fd = esperar_cliente(servidor_fd);
+//		pthread_create(&hilo_clientes, NULL, atender_cliente, cliente_fd);
+//	}
 
 	liberar();
 	return EXIT_SUCCESS;
 }
 
 void inicializar() {
-	logger = log_create("../SUSE.log", "SUSE", 1, LOG_LEVEL_DEBUG);
+//	logger = log_create("../SUSE.log", "SUSE", 1, LOG_LEVEL_DEBUG);
+	log_iniciar("SUSE.log", "SUSE", true);
+	log_msje_info("Iniciando SUSE");
 	logger_metricas = log_create("../METRICAS.log", "SUSE", 1, LOG_LEVEL_DEBUG);
 	diccionario_programas = dictionary_create();
 	diccionario_tid_pid = dictionary_create();

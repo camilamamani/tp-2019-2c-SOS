@@ -27,7 +27,7 @@ all: liblibSUSE.so
 # Tool invocations
 liblibSUSE.so: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Invoking: GCC C Linker'
+	@echo 'Invoking: Cross GCC Linker'
 	gcc -shared -o "liblibSUSE.so" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
@@ -35,14 +35,7 @@ liblibSUSE.so: $(OBJS) $(USER_OBJS)
 # Other Targets
 clean:
 	-$(RM) $(LIBRARIES)$(OBJS)$(C_DEPS) liblibSUSE.so
-	sudo rm -rf /usr/include/libSUSE
 	-@echo ' '
-	
-install: all
-	sudo cp liblibSUSE.so /usr/lib
-	sudo mkdir /usr/include/libSUSE
-	sudo cp ../libSUSE.h /usr/include/libSUSE
-	sudo cp ../utils.h /usr/include/libSUSE
 
 .PHONY: all clean dependents
 

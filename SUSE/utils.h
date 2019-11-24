@@ -15,10 +15,15 @@
 #include <netdb.h>
 #include <commons/log.h>
 #include <commons/collections/list.h>
+#include <commons/collections/queue.h>
 #include <string.h>
 #include "configuracion.h"
-#include <libSUSE/libSUSE.h>
-#include <libSUSE/utils.h>
+#include <errno.h>
+#include "struct_suse.h"
+//
+#include "protocol.h"
+
+
 
 typedef struct
 {
@@ -39,5 +44,12 @@ int esperar_cliente(int);
 t_paquete* recibir_paquete(int);
 void recibir_mensaje(int);
 int recibir_cod_op(int);
+
+//
+void agregar_hilo_a_new(hilo_t *hilo_new);
+
+hilo_t * devolver_primer_hilo(t_queue* cola);
+
+
 
 #endif /* UTILS_H_ */

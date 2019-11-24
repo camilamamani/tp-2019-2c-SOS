@@ -4,20 +4,32 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../libSUSE.c 
+../libSUSE.c \
+../log_suse.c \
+../protocol.c \
+../socket.c \
+../utils.c 
 
 OBJS += \
-./libSUSE.o 
+./libSUSE.o \
+./log_suse.o \
+./protocol.o \
+./socket.o \
+./utils.o 
 
 C_DEPS += \
-./libSUSE.d 
+./libSUSE.d \
+./log_suse.d \
+./protocol.d \
+./socket.d \
+./utils.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
 %.o: ../%.c
 	@echo 'Building file: $<'
-	@echo 'Invoking: GCC C Compiler'
-	gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Invoking: Cross GCC Compiler'
+	gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

@@ -1,13 +1,9 @@
-#include <hilolay/alumnos.h>
-#include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
-
 #include "libSUSE.h"
-#include "utils.h"
 
 int max_tid = 0;
+int cant_proceso = 0;
 
+//esto lo hace suse
 hilo_t* crear_nuevo_hilo(int tid, int pid) {
 	hilo_t* hilo = malloc(sizeof(hilo_t));
 	hilo->tid = tid;
@@ -20,6 +16,10 @@ hilo_t* crear_nuevo_hilo(int tid, int pid) {
 	return hilo;
 }
 
+int ejecutar_operacion(int tid, int operacion) {
+ return 0;
+}
+/*
 int ejecutar_operacion(int tid, int operacion) {
 	int conexion = conectarse_a_suse();
 	int pid = getpid();
@@ -36,45 +36,89 @@ int ejecutar_operacion(int tid, int operacion) {
 
 	return 0;
 }
+*/
 
-int conectarse_a_suse() {
-	struct sockaddr_in cliente;
-	struct hostent *servidor;
-	servidor = gethostbyname("127.0.0.1");
+void conectarse_a_suse() {
+//	struct sockaddr_in cliente;
+//	struct hostent *servidor;
+//	servidor = gethostbyname("127.0.0.1");
+//
+//	if(servidor == NULL)
+//	{
+//	  printf("Host erróneo\n");
+//	  return 1;
+//	}
+//
+//	char buffer[100];
+//	int conexion = socket(AF_INET, SOCK_STREAM, 0);
+//	bzero((char *)&cliente, sizeof((char *)&cliente));
+//
+//	cliente.sin_family = AF_INET;
+//	cliente.sin_port = htons(8524);
+//	bcopy((char *)servidor->h_addr, (char *)&cliente.sin_addr.s_addr, sizeof(servidor->h_length));
+//
+//	if(connect(conexion,(struct sockaddr *)&cliente, sizeof(cliente)) < 0)
+//	{
+//	  printf("Error conectando con el host\n");
+//	  close(conexion);
+//	  return 1;
+//	}
 
-	if(servidor == NULL)
-	{
-	  printf("Host erróneo\n");
-	  return 1;
-	}
+	char * ip = "127.0.0.1";
+	char * puerto = "8524";
 
-	char buffer[100];
-	int conexion = socket(AF_INET, SOCK_STREAM, 0);
-	bzero((char *)&cliente, sizeof((char *)&cliente));
+	log_iniciar("libsuse.log", "libsuse", true);
+	log_msje_info("Iniciando libSUSE");
 
-	cliente.sin_family = AF_INET;
-	cliente.sin_port = htons(8524);
-	bcopy((char *)servidor->h_addr, (char *)&cliente.sin_addr.s_addr, sizeof(servidor->h_length));
+	suse_server.fd = crear_conexion(ip, puerto);
 
-	if(connect(conexion,(struct sockaddr *)&cliente, sizeof(cliente)) < 0)
-	{
-	  printf("Error conectando con el host\n");
-	  close(conexion);
-	  return 1;
-	}
+	log_msje_info("Socket [ %d ] conectado a [ %s:%d  ]", suse_server.fd, ip, puerto);
 
-	return conexion;
+	handshake_enviar(suse_server.fd, COD_PROCESO);
+	handshake_recibir(suse_server.fd);
+
+	socket_liberar(suse_server.fd);
+
 }
 
-int suse_create(int tid){
+
+int libsuse_create(int tid){
+	log_msje_info("Operacion CREATE para el hilo: [%i]", tid);
+//este if creo que va del lado del server
 	if (tid > max_tid) max_tid = tid;
-	//printf("suse_create(%i)\n", tid);
-	return ejecutar_operacion(tid, 1);
+
+	package_t paquete, respuesta;
+
+//	se serializa el paquete a enviar
+	paquete = slz_cod_create(tid);
+
+//	se valida se envio el paquete
+	if(!paquete_enviar(suse_server.fd, paquete))
+		log_msje_error("No se pudo enviar el paquete");
+	else
+		log_msje_info("Se envio operacion create al server");
+
+//	espero a que me responda el server SUSE
+	respuesta = paquete_recibir(suse_server.fd);
+
+//	valido lo que resivo de SUSE
+	if(respuesta.header.cod_operacion == COD_ERROR){
+		int err;
+		log_msje_error("create me llego cod error");
+		dslz_res_error(respuesta.payload, &err);
+		return -err;
+	}
+
+//	sila respuesta el OK genero un log
+	log_msje_info("libSUSE CREE UN HILO DE ID: [ %i ]", tid);
+	return 0;
+
+//	return ejecutar_operacion(tid, 1);
 }
 
 int suse_schedule_next(void){
 	int next = max_tid;
-	next = ejecutar_operacion(next, 2);
+//	next = ejecutar_operacion(next, 2);
 	return next;
 	//printf("suse_schedule_next() (hilo %i)\n", next);
 	//SUSE debe devolver el TID del próximo hilo a planificar.
@@ -99,7 +143,7 @@ int suse_signal(int tid, char *sem_name){
 }
 
 static struct hilolay_operations hiloops = {
-		.suse_create = &suse_create,
+		.suse_create = &libsuse_create,
 		.suse_schedule_next = &suse_schedule_next,
 		.suse_join = &suse_join,
 		.suse_close = &suse_close
@@ -107,8 +151,9 @@ static struct hilolay_operations hiloops = {
 
 void hilolay_init(void){
 	init_internal(&hiloops);
+	conectarse_a_suse();
 }
-
+/*
 void* serializar_paquete(t_paquete* paquete, int bytes)
 {
 	void * magic = malloc(bytes);
@@ -127,15 +172,17 @@ void* serializar_paquete(t_paquete* paquete, int bytes)
 
 	return magic;
 }
+*/
 
-t_paquete* crear_paquete(int operacion)
+/*t_paquete* crear_paquete(int operacion)
 {
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 	paquete->codigo_operacion = operacion;
 	crear_buffer(paquete);
 	return paquete;
 }
-
+*/
+/*
 void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
 {
 	paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio + sizeof(int));
@@ -150,6 +197,8 @@ void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
 	memcpy(&val, valor, sizeof(int));
 }
 
+
+// se eliminaria
 void enviar_paquete(t_paquete* paquete, int socket_cliente)
 {
 	int bytes = paquete->buffer->size + 2*sizeof(int);
@@ -159,11 +208,7 @@ void enviar_paquete(t_paquete* paquete, int socket_cliente)
 	memcpy(&opcode, a_enviar, 4);
 	memcpy(&size, a_enviar + 4, 4);
 	memcpy(&tid, a_enviar + 8, 4);
-	/*
-	printf("opcode enviado: %i\n", opcode);
-	printf("size enviado: %i\n", size);
-	printf("TID enviado: %i\n", tid);
-	*/
+
 }
 
 void crear_buffer(t_paquete* paquete)
@@ -172,3 +217,5 @@ void crear_buffer(t_paquete* paquete)
 	paquete->buffer->size = 0;
 	paquete->buffer->stream = NULL;
 }
+*/
+

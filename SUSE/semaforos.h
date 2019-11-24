@@ -9,8 +9,8 @@
 #define SEMAFOROS_H_
 
 #include "configuracion.h"
-#include <libSUSE/libSUSE.h>
-#include <libSUSE/utils.h>
+#include "utils.h"
+
 
 semaforo_t* semaforos;
 

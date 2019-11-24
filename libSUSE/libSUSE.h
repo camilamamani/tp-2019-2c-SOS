@@ -8,6 +8,11 @@
 #ifndef LIBSUSE_H_
 #define LIBSUSE_H_
 
+#include <hilolay/alumnos.h>
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -18,6 +23,16 @@
 #include <netdb.h>
 #include <commons/collections/queue.h>
 #include <commons/collections/dictionary.h>
+
+#include "log_suse.h"
+#include "protocol.h"
+#include "utils.h"
+#include "socket.h"
+
+#define COD_PROCESO 'C'
+
+
+socket_t suse_server;
 
 typedef struct {
 	int tid;
@@ -35,14 +50,17 @@ typedef struct {
 	hilo_t* hilo_en_exec;
 } programa_t;
 
-typedef enum {
-	CREATE,
-	SCHEDULE_NEXT,
-	JOIN,
-	CLOSE,
-	WAIT,
-	SIGNAL
-} op_code;
+//---
+//typedef enum {
+//	CREATE,
+//	SCHEDULE_NEXT,
+//	JOIN,
+//	CLOSE,
+//	WAIT,
+//	SIGNAL
+//} op_code;
+
+//--
 
 typedef struct {
 	char* id;
@@ -54,6 +72,10 @@ t_dictionary* diccionario_tid_pid;
 t_dictionary* diccionario_tid;
 
 void* serializar(hilo_t);
-int ejecutar_operacion(int, int);
+//int ejecutar_operacion(int, int);
+
+void hilolay_init(void);
+
+
 
 #endif /* LIBSUSE_H_ */

@@ -5,27 +5,35 @@
 #include <semaphore.h>
 #include "utils.h"
 #include "configuracion.h"
-#include <libSUSE/libSUSE.h>
-#include <libSUSE/utils.h>
 #include <commons/string.h>
+#include "log.h"
+#include "socket.h"
+#include "servidor.h"
+#include "struct_suse.h"
+
+#define COD_PROCESO 'S'
 
 int PID = 0;
 int TID = 0;
 int GRADO_MULTIPROGRAMACION = 0;
 
-t_log* logger;
-t_log* logger_metricas;
-
-t_queue* cola_new;
-t_queue* cola_blocked;
-t_queue* cola_exit;
-programa_t* programas;
-t_queue* colas_ready[100];
-t_queue* colas_exec[100];
-
-sem_t* tid_sem;
-sem_t* pid_sem;
-sem_t* multiprogramacion_sem;
+//t_log* logger;
+//t_log* logger_metricas;
+//
+//t_queue** cola_new;
+//t_queue* cola_blocked;
+//t_queue* cola_exit;
+//programa_t* programas;
+//t_queue* colas_ready[100];
+//t_queue* colas_exec[100];
+//
+//sem_t* tid_sem;
+//sem_t* pid_sem;
+//sem_t* multiprogramacion_sem;
+//
+//t_dictionary* diccionario_programas;
+//t_dictionary* diccionario_tid_pid;
+//t_dictionary* diccionario_tid;
 
 void inicializar();
 void logear_metricas();
@@ -39,3 +47,7 @@ void agregar_programa(hilo_t*);
 int obtener_indice_de_programa(int);
 hilo_t* siguiente_hilo_a_ejecutar(programa_t);
 void liberar();
+
+
+
+

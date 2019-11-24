@@ -93,13 +93,31 @@ t_paquete* recibir_paquete(int socket_cliente)
 	return paquete;
 }
 
+//////////////////////////////////////
 
+hilo_t* crear_nuevo_hilo(int tid, int pid)
+{
+	hilo_t* hilo = malloc(sizeof(hilo_t));
+	hilo->tid = tid;
+	hilo->pid = pid;
+	hilo->tiempo_ejecucion = 0;
+	hilo->tiempo_espera = 0;
+	hilo->tiempo_cpu = 0;
+	hilo->estimacion_anterior = 0;
+	hilo->rafaga_anterior = 0;
+	return hilo;
+}
 
+void agregar_hilo_a_new(hilo_t *hilo_new)
+{
+	//ver grado de multiprogramacion
+	queue_push(cola_new, hilo_new);
 
+}
 
-
-
-
-
-
+hilo_t* devolver_primer_hilo(t_queue* cola)
+{
+	hilo_t *pri_hilo = (hilo_t *) queue_peek(cola);
+	return pri_hilo;
+}
 

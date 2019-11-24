@@ -6,19 +6,34 @@
 C_SRCS += \
 ../SUSE.c \
 ../configuracion.c \
+../log.c \
+../protocol.c \
 ../semaforos.c \
+../servidor.c \
+../socket.c \
+../suse_ops.c \
 ../utils.c 
 
 OBJS += \
 ./SUSE.o \
 ./configuracion.o \
+./log.o \
+./protocol.o \
 ./semaforos.o \
+./servidor.o \
+./socket.o \
+./suse_ops.o \
 ./utils.o 
 
 C_DEPS += \
 ./SUSE.d \
 ./configuracion.d \
+./log.d \
+./protocol.d \
 ./semaforos.d \
+./servidor.d \
+./socket.d \
+./suse_ops.d \
 ./utils.d 
 
 
