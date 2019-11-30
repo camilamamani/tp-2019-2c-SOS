@@ -46,10 +46,10 @@ void recibir_mensaje(int);
 int recibir_cod_op(int);
 
 //
-void agregar_hilo_a_new(hilo_t *hilo_new);
+void agregar_hilo_a_new(hilo_t **hilo_new);
 
 hilo_t * devolver_primer_hilo(t_queue* cola);
-
+void crear_nuevo_hilo(int tid, int pid, hilo_t ** hilo_new);
 
 
 #endif /* UTILS_H_ */

@@ -4,7 +4,8 @@ int atender_conexiones(int cliente_fd)
 {
 	package_t paquete;
 	char *buffer;
-	int **tid;
+	char * semaforo;
+	int tid;
 
 	while(true){
 		paquete = paquete_recibir(cliente_fd);
@@ -20,16 +21,18 @@ int atender_conexiones(int cliente_fd)
 			case COD_CREATE:
 				log_msje_info("Me llego operacion create");
 				dslz_payload_with_tid(paquete.payload, &tid);
-				suse_create(*tid, cliente_fd);
+				suse_create(tid, cliente_fd);
 				break;
 			case SCHEDULE_NEXT:
 				log_msje_info("Me llego operacion schudule_next");
+				suse_schedule_next(cliente_fd);
 				break;
 			case JOIN:
 				log_msje_info("Me llego operacion join");
 				break;
 			case WAIT:
 				log_msje_info("Me llego operacion wait");
+				dslz_payload_with_tid_semaforo(buffer, &tid, &semaforo );
 				break;
 			case SIGNAL:
 				log_msje_info("Me llego operacion signal");

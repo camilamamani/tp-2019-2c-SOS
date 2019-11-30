@@ -151,18 +151,32 @@ package_t slz_simple_res(op_code cod)
 	return paquete;
 }
 
-void dslz_payload_with_tid(void *buffer, int ** tid)
+//deserializacion server
+void dslz_payload_with_tid(void *buffer, int * tid)
 {
 	int tam_tid;
 	memcpy(&tam_tid, buffer, sizeof(int));
 
-	char *id = malloc(tam_tid);
+	int *id = malloc(tam_tid);
 	memcpy(id, buffer+sizeof(int), tam_tid);
 
-	*tid = id;
+	tid = id;
 }
 
-//operaciones libsuse
+void dslz_payload_with_tid_semaforo(void *buffer, int * tid, char** semaforo)
+{
+	int tam_sem;
+	memcpy(&tam_sem, buffer, sizeof(int));
+
+	char *sem = malloc(tam_sem+1);
+	memcpy(sem, buffer+sizeof(int), tam_sem);
+	sem[tam_sem]='\0';
+	*semaforo = sem;
+
+	memcpy(tid,	buffer+sizeof(int)+tam_sem, sizeof(int));
+}
+
+//operaciones libsuse serealizadas
 package_t slz_cod_create(int tid){
 	package_t paquete;
 	int tam_tid = sizeof(tid);

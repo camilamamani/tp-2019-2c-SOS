@@ -3,33 +3,13 @@
 int max_tid = 0;
 int cant_proceso = 0;
 
-int ejecutar_operacion(int tid, int operacion) {
- return 0;
-}
-/*
-int ejecutar_operacion(int tid, int operacion) {
-	int conexion = conectarse_a_suse();
-	int pid = getpid();
-	t_paquete* paquete = crear_paquete(operacion);
-	hilo_t* hilo = crear_nuevo_hilo(tid, pid);
-	agregar_a_paquete(paquete, hilo, sizeof(hilo_t));
-	enviar_paquete(paquete, conexion);
 
-	if (operacion == 2) {
-		int tid_proximo_hilo;
-		recv(conexion, &tid_proximo_hilo, sizeof(int), 0);
-		return tid_proximo_hilo;
-	}
-
-	return 0;
-}
-*/
 /* ver si no se mueve en otro parte */
 void conectarse_a_suse() {
 
 	socket_t server;
 	char *ip = "127.0.0.1";
-	int puerto = 8525;
+	int puerto = 8524;
 
 	log_iniciar("libsuse.log", "libsuse", true);
 	log_msje_info("Iniciando libSUSE");
@@ -50,13 +30,11 @@ void conectarse_a_suse() {
 int libsuse_create(int tid){
 
 	log_msje_info("Operacion CREATE para el hilo: [%i]", tid);
-//este if creo que va del lado del server
-//	if (tid > max_tid) max_tid = tid;
 
 	package_t paquete, respuesta;
 
 //	se serializa el paquete a enviar
-	paquete = slz_cod_create(tid);
+	paquete = slz_cod_comun(tid, COD_CREATE);
 
 //	se valida se envio el paquete
 	if(!paquete_enviar(suse_server.fd, paquete))
@@ -78,31 +56,160 @@ int libsuse_create(int tid){
 //	sila respuesta el OK genero un log
 	log_msje_info("libSUSE CREE UN HILO DE ID: [ %i ]", tid);
 	return 0;
-
-//	return ejecutar_operacion(tid, 1);
 }
 
 int libsuse_schedule_next(void){
-	int next = max_tid;
-//	next = ejecutar_operacion(next, 2);
-	return 0;
+	log_msje_info("Operacion SCHEDULE_NEXT para saber el prox. hilo");
+
+		package_t paquete, respuesta;
+
+	//	se serializa el paquete a enviar
+		paquete = slz_cod_schedule_next();
+
+	//	se valida se envio el paquete
+		if(!paquete_enviar(suse_server.fd, paquete))
+			log_msje_error("No se pudo enviar el paquete");
+		else
+			log_msje_info("Se envio operacion create al server");
+
+	//	espero a que me responda el server SUSE
+		respuesta = paquete_recibir(suse_server.fd);
+
+	//	valido lo que resivo de SUSE
+		if(respuesta.header.cod_operacion == COD_ERROR){
+			int err;
+			log_msje_error("create me llego cod error");
+			dslz_res_error(respuesta.payload, &err);
+			return -err;
+		}
+
+	//	sila respuesta el OK genero un log
+		log_msje_info("libSUSE determino el proximo hilo");
+		return 0;
 }
 
 int libsuse_join(int tid){
-	//printf("suse_join(%i)\n", tid);
+	log_msje_info("Operacion JOIN para el hilo: [%i]", tid);
+
+	package_t paquete, respuesta;
+
+//	se serializa el paquete a enviar
+	paquete = slz_cod_comun(tid, JOIN);
+
+//	se valida se envio el paquete
+	if(!paquete_enviar(suse_server.fd, paquete))
+		log_msje_error("No se pudo enviar el paquete");
+	else
+		log_msje_info("Se envio operacion create al server");
+
+//	espero a que me responda el server SUSE
+	respuesta = paquete_recibir(suse_server.fd);
+
+//	valido lo que resivo de SUSE
+	if(respuesta.header.cod_operacion == COD_ERROR){
+		int err;
+		log_msje_error("create me llego cod error");
+		dslz_res_error(respuesta.payload, &err);
+		return -err;
+	}
+
+//	sila respuesta el OK genero un log
+	log_msje_info("libSUSE  JOIN PARA EL HILO DE ID: [ %i ]", tid);
+
 	return 0;
 }
 
 int libsuse_close(int tid){
-	//printf("suse_close(%i)\n", tid);
+	log_msje_info("Operacion CLOSE para el hilo: [%i]", tid);
+
+	package_t paquete, respuesta;
+
+//	se serializa el paquete a enviar
+	paquete = slz_cod_comun(tid, CLOSE);
+
+//	se valida se envio el paquete
+	if(!paquete_enviar(suse_server.fd, paquete))
+		log_msje_error("No se pudo enviar el paquete");
+	else
+		log_msje_info("Se envio operacion create al server");
+
+//	espero a que me responda el server SUSE
+	respuesta = paquete_recibir(suse_server.fd);
+
+//	valido lo que resivo de SUSE
+	if(respuesta.header.cod_operacion == COD_ERROR){
+		int err;
+		log_msje_error("create me llego cod error");
+		dslz_res_error(respuesta.payload, &err);
+		return -err;
+	}
+
+//	sila respuesta el OK genero un log
+	log_msje_info("libSUSE CLOSE EL HILO DE ID: [ %i ]", tid);
+
 	return 0;
 }
 
 int libsuse_wait(int tid, char *sem_name){
+
+	log_msje_info("Operacion WAIT para el hilo: [%i] de semaforo: [%s]", tid, sem_name);
+
+	package_t paquete, respuesta;
+
+//	se serializa el paquete a enviar
+	paquete = slz_cod_wait(tid, sem_name);
+
+//	se valida se envio el paquete
+	if(!paquete_enviar(suse_server.fd, paquete))
+		log_msje_error("No se pudo enviar el paquete");
+	else
+		log_msje_info("Se envio operacion create al server");
+
+//	espero a que me responda el server SUSE
+	respuesta = paquete_recibir(suse_server.fd);
+
+//	valido lo que resivo de SUSE
+	if(respuesta.header.cod_operacion == COD_ERROR){
+		int err;
+		log_msje_error("create me llego cod error");
+		dslz_res_error(respuesta.payload, &err);
+		return -err;
+	}
+
+//	sila respuesta el OK genero un log
+	log_msje_info("libSUSE WAIT EN EL SEMAFORO: [%s] PARA EL HILO DE ID: [ %i ]", sem_name, tid);
+
 	return 0;
 }
 
 int libsuse_signal(int tid, char *sem_name){
+	log_msje_info("Operacion SIGNAL para el hilo: [%i] de semaforo: [%s]", tid, sem_name);
+
+	package_t paquete, respuesta;
+
+//	se serializa el paquete a enviar
+	paquete = slz_cod_wait(tid, sem_name);
+
+//	se valida se envio el paquete
+	if(!paquete_enviar(suse_server.fd, paquete))
+		log_msje_error("No se pudo enviar el paquete");
+	else
+		log_msje_info("Se envio operacion create al server");
+
+//	espero a que me responda el server SUSE
+	respuesta = paquete_recibir(suse_server.fd);
+
+//	valido lo que resivo de SUSE
+	if(respuesta.header.cod_operacion == COD_ERROR){
+		int err;
+		log_msje_error("create me llego cod error");
+		dslz_res_error(respuesta.payload, &err);
+		return -err;
+	}
+
+//	sila respuesta el OK genero un log
+	log_msje_info("libSUSE SIGNAL EN EL SEMAFORO: [%s] PARA EL HILO DE ID: [ %i ]", sem_name, tid);
+
 	return 0;
 }
 
@@ -127,69 +234,5 @@ void set_server_suse(socket_t fd)
 {
 	suse_server = fd;
 }
-/*
-void* serializar_paquete(t_paquete* paquete, int bytes)
-{
-	void * magic = malloc(bytes);
-	int desplazamiento = 0;
-	memcpy(magic + desplazamiento, &(paquete->codigo_operacion), sizeof(int));
-	desplazamiento+= sizeof(int);
-	memcpy(magic + desplazamiento, &(paquete->buffer->size), sizeof(int));
-	desplazamiento+= sizeof(int);
-	memcpy(magic + desplazamiento, paquete->buffer->stream, paquete->buffer->size);
-	desplazamiento+= paquete->buffer->size;
 
-	int opcode, size, tid;
-	memcpy(&opcode, magic, sizeof(int));
-	memcpy(&size, magic + 4, sizeof(int));
-	memcpy(&tid, magic + 8, sizeof(int));
-
-	return magic;
-}
-*/
-
-/*t_paquete* crear_paquete(int operacion)
-{
-	t_paquete* paquete = malloc(sizeof(t_paquete));
-	paquete->codigo_operacion = operacion;
-	crear_buffer(paquete);
-	return paquete;
-}
-*/
-/*
-void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
-{
-	paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio + sizeof(int));
-	memcpy(paquete->buffer->stream + paquete->buffer->size, &tamanio, sizeof(int));
-	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), valor, tamanio);
-	paquete->buffer->size += tamanio + sizeof(int);
-	int opcode;
-	int size;
-	int val;
-	memcpy(&opcode, &paquete->codigo_operacion, sizeof(int));
-	memcpy(&size, &paquete->buffer->size, sizeof(int));
-	memcpy(&val, valor, sizeof(int));
-}
-
-
-// se eliminaria
-void enviar_paquete(t_paquete* paquete, int socket_cliente)
-{
-	int bytes = paquete->buffer->size + 2*sizeof(int);
-	void* a_enviar = serializar_paquete(paquete, bytes);
-	send(socket_cliente, a_enviar, bytes, 0);
-	int opcode, size, tid;
-	memcpy(&opcode, a_enviar, 4);
-	memcpy(&size, a_enviar + 4, 4);
-	memcpy(&tid, a_enviar + 8, 4);
-
-}
-
-void crear_buffer(t_paquete* paquete)
-{
-	paquete->buffer = malloc(sizeof(t_buffer));
-	paquete->buffer->size = 0;
-	paquete->buffer->stream = NULL;
-}
-*/
 

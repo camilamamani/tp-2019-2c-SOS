@@ -95,7 +95,7 @@ t_paquete* recibir_paquete(int socket_cliente)
 
 //////////////////////////////////////
 
-hilo_t* crear_nuevo_hilo(int tid, int pid)
+void crear_nuevo_hilo(int tid, int pid, hilo_t ** hilo_new)
 {
 	hilo_t* hilo = malloc(sizeof(hilo_t));
 	hilo->tid = tid;
@@ -105,13 +105,14 @@ hilo_t* crear_nuevo_hilo(int tid, int pid)
 	hilo->tiempo_cpu = 0;
 	hilo->estimacion_anterior = 0;
 	hilo->rafaga_anterior = 0;
-	return hilo;
+
+	memcpy(&hilo_new, &hilo, sizeof(hilo_t));
+
 }
 
-void agregar_hilo_a_new(hilo_t *hilo_new)
+void agregar_hilo_a_new(hilo_t **hilo_new)
 {
-	//ver grado de multiprogramacion
-	queue_push(cola_new, hilo_new);
+	queue_push(cola_new, (*hilo_new));
 
 }
 

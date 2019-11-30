@@ -8,7 +8,7 @@ int main() {
 
 	servidor_iniciar();
 
-	pthread_create(&hilo_metricas, NULL, logear_metricas, NULL);
+	pthread_create(&hilo_metricas, NULL, (void *)logear_metricas, NULL);
 
 	liberar();
 	return EXIT_SUCCESS;

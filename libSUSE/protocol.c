@@ -158,18 +158,63 @@ void dslz_payload_with_tid(void * buffer, int ** tid)
 }
 
 //serializar libsuse
-package_t slz_cod_create(int tid){
+
+//COMUN SERIALIZACION
+package_t slz_cod_comun(int tid, op_code operacion){
 	log_msje_info("ENVIO TID DEL HILO: [ %i ]", tid);
 	package_t paquete;
 	int tam_payload = sizeof(int);
 
-	paquete.header = header_get('C', COD_CREATE, tam_payload);
+	paquete.header = header_get('C', operacion, tam_payload);
 	paquete.payload = malloc(tam_payload);
 
 	memcpy(paquete.payload, &tid, sizeof(int));
 
 	return paquete;
 }
+
+package_t slz_cod_schedule_next(){
+	log_msje_info("ENVIO LA SEÑAL SCHEDULE_NEXT");
+	package_t paquete;
+
+	paquete.header = header_get('C', SCHEDULE_NEXT, 0);
+
+	return paquete;
+}
+
+
+package_t slz_cod_wait(int tid, char * semaforo){
+	log_msje_info("ENVIO TID DEL HILO: [ %i ]", tid);
+	package_t paquete;
+	int tam_semaforo = strlen(semaforo);
+	int tam_payload = 2* sizeof(int) + tam_semaforo;
+
+	paquete.header = header_get('C', WAIT, tam_payload);
+	paquete.payload = malloc(tam_payload);
+
+	memcpy(paquete.payload, &tid, sizeof(int));
+	memcpy(paquete.payload+sizeof(int), &semaforo, sizeof(int));
+	memcpy(paquete.payload+sizeof(int)+sizeof(int), semaforo, tam_semaforo);
+
+	return paquete;
+}
+
+package_t slz_cod_signal(int tid, char * semaforo){
+	log_msje_info("ENVIO TID DEL HILO: [ %i ]", tid);
+	package_t paquete;
+	int tam_semaforo = strlen(semaforo);
+	int tam_payload = 2*sizeof(int) + tam_semaforo;
+
+	paquete.header = header_get('C', SIGNAL, tam_payload);
+	paquete.payload = malloc(tam_payload);
+
+	memcpy(paquete.payload, &tid, sizeof(int));
+	memcpy(paquete.payload+sizeof(int), &semaforo, sizeof(int));
+	memcpy(paquete.payload+sizeof(int)+sizeof(int), semaforo, tam_semaforo);
+
+	return paquete;
+}
+
 
 //deserializar libsuse
 

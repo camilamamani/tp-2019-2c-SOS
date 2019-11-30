@@ -49,8 +49,12 @@ package_t paquete_recibir(int socket);
 bool paquete_enviar(int socket, package_t paquete);
 
 //operaciones libsuse (cliente)
-package_t slz_cod_create(int tid);
+//package_t slz_cod_create(int tid);
 package_t slz_res_error(int errnum);
+package_t slz_cod_comun(int tid, op_code operacion);
+package_t slz_cod_schedule_next();
+package_t slz_cod_wait(int tid, char * semaforo);
+package_t slz_cod_signal(int tid, char * semaforo);
 
 //void dslz_res_create();
 void dslz_res_error(void *buffer, int *errnum);

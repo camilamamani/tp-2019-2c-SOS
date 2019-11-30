@@ -14,6 +14,7 @@
 
 /* operaciones de suse */
 void suse_create(int, int);
+void suse_schedule_next(int cliente_fd);
 
 
 #endif /* SUSE_OPS_H_ */

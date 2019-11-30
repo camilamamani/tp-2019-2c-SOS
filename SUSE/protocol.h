@@ -52,7 +52,8 @@ bool paquete_enviar(int socket, package_t paquete);
 package_t slz_res_error(int errnum);
 package_t slz_simple_res(op_code cod);
 
-void dslz_payload_with_tid(void *buffer, int **tid);
+void dslz_payload_with_tid(void *buffer, int *tid);
+void dslz_payload_with_tid_semaforo(void *buffer, int * tid, char** semaforo);
 
 
 
