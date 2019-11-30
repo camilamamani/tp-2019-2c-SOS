@@ -24,34 +24,55 @@ int ejecutar_operacion(int tid, int operacion) {
 	return 0;
 }
 */
-/* ver si no se mueve en otro parte */
-void conectarse_a_suse() {
 
-	socket_t server;
-	char *ip = "127.0.0.1";
-	int puerto = 8525;
+void conectarse_a_suse() {
+//	struct sockaddr_in cliente;
+//	struct hostent *servidor;
+//	servidor = gethostbyname("127.0.0.1");
+//
+//	if(servidor == NULL)
+//	{
+//	  printf("Host erróneo\n");
+//	  return 1;
+//	}
+//
+//	char buffer[100];
+//	int conexion = socket(AF_INET, SOCK_STREAM, 0);
+//	bzero((char *)&cliente, sizeof((char *)&cliente));
+//
+//	cliente.sin_family = AF_INET;
+//	cliente.sin_port = htons(8524);
+//	bcopy((char *)servidor->h_addr, (char *)&cliente.sin_addr.s_addr, sizeof(servidor->h_length));
+//
+//	if(connect(conexion,(struct sockaddr *)&cliente, sizeof(cliente)) < 0)
+//	{
+//	  printf("Error conectando con el host\n");
+//	  close(conexion);
+//	  return 1;
+//	}
+
+	char * ip = "127.0.0.1";
+	char * puerto = "8524";
 
 	log_iniciar("libsuse.log", "libsuse", true);
 	log_msje_info("Iniciando libSUSE");
 
-	server.fd = crear_conexion(ip, puerto);
+	suse_server.fd = crear_conexion(ip, puerto);
 
-	log_msje_info("Socket [ %d ] conectado a [ %s : %d  ]", server.fd, ip, puerto);
-	set_server_suse(server);
+	log_msje_info("Socket [ %d ] conectado a [ %s:%d  ]", suse_server.fd, ip, puerto);
 
-	handshake_enviar(server.fd, COD_PROCESO);
-	handshake_recibir(server.fd);
+	handshake_enviar(suse_server.fd, COD_PROCESO);
+	handshake_recibir(suse_server.fd);
 
-//	socket_liberar(server.fd);
+	socket_liberar(suse_server.fd);
 
 }
 
 
 int libsuse_create(int tid){
-
 	log_msje_info("Operacion CREATE para el hilo: [%i]", tid);
 //este if creo que va del lado del server
-//	if (tid > max_tid) max_tid = tid;
+	if (tid > max_tid) max_tid = tid;
 
 	package_t paquete, respuesta;
 
@@ -85,47 +106,39 @@ int libsuse_create(int tid){
 int libsuse_schedule_next(void){
 	int next = max_tid;
 //	next = ejecutar_operacion(next, 2);
-	return 0;
+	return next;
+	//printf("suse_schedule_next() (hilo %i)\n", next);
+	//SUSE debe devolver el TID del próximo hilo a planificar.
 }
 
-int libsuse_join(int tid){
+int suse_join(int tid){
 	//printf("suse_join(%i)\n", tid);
-	return 0;
+	return ejecutar_operacion(tid, 3);
 }
 
-int libsuse_close(int tid){
+int suse_close(int tid){
 	//printf("suse_close(%i)\n", tid);
+	return ejecutar_operacion(tid, 4);
+}
+
+int suse_wait(int tid, char *sem_name){
 	return 0;
 }
 
-int libsuse_wait(int tid, char *sem_name){
-	return 0;
-}
-
-int libsuse_signal(int tid, char *sem_name){
+int suse_signal(int tid, char *sem_name){
 	return 0;
 }
 
 static struct hilolay_operations hiloops = {
 		.suse_create = &libsuse_create,
 		.suse_schedule_next = &libsuse_schedule_next,
-		.suse_wait = &libsuse_wait,
-		.suse_signal = &libsuse_signal,
-		.suse_join = &libsuse_join,
-		.suse_close = &libsuse_close
+		.suse_join = &suse_join,
+		.suse_close = &suse_close
 };
 
-void hilolay_init(void)
-{
-	conectarse_a_suse();
-
+void hilolay_init(void){
 	init_internal(&hiloops);
-
-}
-
-void set_server_suse(socket_t fd)
-{
-	suse_server = fd;
+	conectarse_a_suse();
 }
 /*
 void* serializar_paquete(t_paquete* paquete, int bytes)

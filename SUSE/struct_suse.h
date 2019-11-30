@@ -11,6 +11,7 @@
 typedef struct {
 	int tid;
 	int pid;
+	int time_enter_exec;
 	int tiempo_ejecucion;
 	int tiempo_espera;
 	int tiempo_cpu;

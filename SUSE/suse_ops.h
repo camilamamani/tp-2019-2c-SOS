@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <commons/collections/queue.h>
 #include "protocol.h"
 #include "struct_suse.h"

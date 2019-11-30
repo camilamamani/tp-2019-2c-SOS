@@ -15,7 +15,7 @@
 
 t_config* config;
 char* LISTEN_IP;
-char* LISTEN_PORT;
+int LISTEN_PORT;
 int METRICS_TIMER;
 int MAX_MULTIPROG;
 char** SEM_IDS;

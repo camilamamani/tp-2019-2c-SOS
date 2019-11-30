@@ -27,7 +27,7 @@ all: liblibSUSE.so
 # Tool invocations
 liblibSUSE.so: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Invoking: GCC C Linker'
+	@echo 'Invoking: Cross GCC Linker'
 	gcc -shared -o "liblibSUSE.so" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '

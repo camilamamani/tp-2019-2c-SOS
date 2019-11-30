@@ -20,7 +20,7 @@ static void header_dslz(header_t *header, void *buffer)
 	memcpy(&tam_buf,	buffer+sizeof(char)+sizeof(int),	sizeof(int));
 
 	// Armo el heaader
-	(*header).cod_proceso = proceso;
+	header->cod_proceso = proceso;
 	(*header).cod_operacion = cod_op;
 	(*header).tam_payload = tam_buf;
 }
@@ -144,39 +144,34 @@ void dslz_res_error(void *buffer, int *errnum)
 	memcpy(errnum, buffer, sizeof(int));
 }
 
-package_t slz_simple_res(op_code cod)
+//
+void dslz_payload_with_tid(void * buffer, int ** tid)
 {
-	package_t paquete;
-	paquete.header = header_get('S', cod, 0);
-	return paquete;
-}
+//	int tam_tid;
+//	memcpy(&tam_tid, buffer, sizeof(int));
 
-void dslz_payload_with_tid(void *buffer, int ** tid)
-{
-	int tam_tid;
-	memcpy(&tam_tid, buffer, sizeof(int));
-
-	char *id = malloc(tam_tid);
-	memcpy(id, buffer+sizeof(int), tam_tid);
+	int *id = malloc(4);
+	memcpy(id, buffer+sizeof(int), sizeof(int));
 
 	*tid = id;
+
 }
 
-//operaciones libsuse
+//serializar libsuse
 package_t slz_cod_create(int tid){
+	log_msje_info("ENVIO TID DEL HILO: [ %i ]", tid);
 	package_t paquete;
-	int tam_tid = sizeof(tid);
-	int tam_payload = tam_tid + sizeof(int);
+	int tam_payload = sizeof(int);
 
 	paquete.header = header_get('C', COD_CREATE, tam_payload);
 	paquete.payload = malloc(tam_payload);
 
-	memcpy(paquete.payload, &tam_tid, sizeof(int));
-	memcpy(paquete.payload+sizeof(int), tid, tam_tid );
-
+	memcpy(paquete.payload+sizeof(int), &tid, sizeof(int));
 
 	return paquete;
 }
+
+//deserializar libsuse
 
 
 

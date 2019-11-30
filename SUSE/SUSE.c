@@ -1,21 +1,14 @@
 #include "SUSE.h"
 
 int main() {
-//	int cliente_fd;
-//	pthread_t hilo_clientes;
 	pthread_t hilo_metricas;
 
 	inicializar();
 	configurar();
-//	int servidor_fd = iniciar_servidor();
+
 	servidor_iniciar();
 
 	pthread_create(&hilo_metricas, NULL, logear_metricas, NULL);
-
-//	while(1) {
-//		cliente_fd = esperar_cliente(servidor_fd);
-//		pthread_create(&hilo_clientes, NULL, atender_cliente, cliente_fd);
-//	}
 
 	liberar();
 	return EXIT_SUCCESS;

@@ -166,7 +166,7 @@ package_t slz_cod_create(int tid){
 	paquete.header = header_get('C', COD_CREATE, tam_payload);
 	paquete.payload = malloc(tam_payload);
 
-	memcpy(paquete.payload+sizeof(int), &tid, sizeof(int));
+	memcpy(paquete.payload, &tid, sizeof(int));
 
 	return paquete;
 }

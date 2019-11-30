@@ -2,7 +2,6 @@
 #define COMMON_PROTOCOL_H_
 
 #include <stdlib.h>
-#include "log.h"
 #include <string.h>
 #include <errno.h>
 #include <sys/socket.h>
@@ -10,6 +9,7 @@
 #include <dirent.h>
 
 #include <commons/collections/list.h>
+#include "log_suse.h"
 
 #define TAM_HEADER 9
 
@@ -17,6 +17,7 @@ typedef enum{
     COD_HANDSHAKE,
 	COD_DESC,
 	COD_ERROR,
+	INIT,
 	COD_CREATE,
 	SCHEDULE_NEXT,
 	JOIN,
@@ -47,21 +48,13 @@ void handshake_enviar(int socket, char cod_proc);
 package_t paquete_recibir(int socket);
 bool paquete_enviar(int socket, package_t paquete);
 
-
-/* serializacion en comun*/
-package_t slz_res_error(int errnum);
-package_t slz_simple_res(op_code cod);
-
-void dslz_payload_with_tid(void *buffer, int **tid);
-
-
-
 //operaciones libsuse (cliente)
 package_t slz_cod_create(int tid);
+package_t slz_res_error(int errnum);
 
-void dslz_res_create();
-
-//operacione suse (servidor)
+//void dslz_res_create();
+void dslz_res_error(void *buffer, int *errnum);
+void dslz_payload_with_tid(void *buffer, int ** tid);
 
 
 

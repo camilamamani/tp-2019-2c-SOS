@@ -1,21 +1,41 @@
 #include "servidor.h"
 
-void atender_conexiones(int cliente_fd)
+int atender_conexiones(int cliente_fd)
 {
 	package_t paquete;
 	char *buffer;
-	int tid;
+	int **tid;
 
 	while(true){
 		paquete = paquete_recibir(cliente_fd);
+		printf("operacion:[%i]", paquete.header.cod_operacion);
 		switch(paquete.header.cod_operacion){
 			case COD_HANDSHAKE:
 				handshake_enviar(cliente_fd, 'S');
 				break;
+			case COD_DESC:
+				log_msje_info("El cliente en el socket [ %d ] se desconecto", cliente_fd);
+				return EXIT_FAILURE;
+				break;
 			case COD_CREATE:
 				log_msje_info("Me llego operacion create");
 				dslz_payload_with_tid(paquete.payload, &tid);
-				suse_create(tid, cliente_fd);
+				suse_create(*tid, cliente_fd);
+				break;
+			case SCHEDULE_NEXT:
+				log_msje_info("Me llego operacion schudule_next");
+				break;
+			case JOIN:
+				log_msje_info("Me llego operacion join");
+				break;
+			case WAIT:
+				log_msje_info("Me llego operacion wait");
+				break;
+			case SIGNAL:
+				log_msje_info("Me llego operacion signal");
+				break;
+			case CLOSE:
+				log_msje_info("Me llego operacion close");
 				break;
 			default:
 				log_msje_error("Codigo de operacion desconocido");
@@ -46,10 +66,7 @@ void servidor_iniciar()
 			pthread_create(&thread_conexiones,NULL, (void*)atender_conexiones, (void *)cliente.fd);
 			pthread_join(thread_conexiones, NULL);
 		}
-		else
-		{
-			log_msje_error("No se conecto socket [ %d ]", cliente.fd);
-		}
+
 	}
 
 	socket_liberar(suse_fd);
