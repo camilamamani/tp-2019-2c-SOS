@@ -172,7 +172,7 @@ void atender_cliente(int cliente_fd) {
 			recv(cliente_fd, &tid, sizeof(int), MSG_WAITALL);
 			//hilo_t* proximo_hilo; = malloc(sizeof(hilo_t));
 			hilo_t* proximo_hilo = crear_hilo(pid, tid);
-			programa_t* programa = obtener_programa(hilo_nuevo);
+			programa_t* programa = obtener_programa(proximo_hilo->pid);
 			int proximo_tid = ejecutar_nuevo_hilo(programa);
 			//proximo = string_itoa(proximo_hilo->tid);
 			send(cliente_fd, &proximo_tid, sizeof(int), MSG_WAITALL);
@@ -180,7 +180,7 @@ void atender_cliente(int cliente_fd) {
 		case JOIN:
 
 			printf("elementos bloqueados: %i\n", queue_size(cola_blocked));
-
+/*
 
 			recv(cliente_fd, &pid, sizeof(int), MSG_WAITALL);
 			recv(cliente_fd, &tid, sizeof(int), MSG_WAITALL);
@@ -201,7 +201,7 @@ void atender_cliente(int cliente_fd) {
 			}
 
 
-
+*/
 			break;
 		case CLOSE:
 			/*
