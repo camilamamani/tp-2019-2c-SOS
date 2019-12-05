@@ -38,6 +38,7 @@ typedef struct {
 } programa_t;
 
 typedef enum {
+	INIT,
 	CREATE,
 	SCHEDULE_NEXT,
 	JOIN,

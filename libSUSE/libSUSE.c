@@ -10,17 +10,49 @@ int max_tid = 0;
 int conexion_con_suse;
 
 int suse_create(int tid){
-	if (tid > max_tid) max_tid = tid;
-	return ejecutar_operacion(tid, CREATE);
+	conexion_con_suse = conectarse_a_suse();
+	int offset = 0;
+	void* buffer = malloc(3 * sizeof(int));
+	int opcode = CREATE;
+	int pid = getpid();
+	memcpy(buffer + offset, &opcode, sizeof(int));
+	offset += sizeof(int);
+	memcpy(buffer + offset, &pid, sizeof(int));
+	offset += sizeof(int);
+	memcpy(buffer + offset, &tid, sizeof(int));
+	offset += sizeof(int);
+	send(conexion_con_suse, buffer, offset, MSG_WAITALL);
+	return 0;
 }
 
 int suse_schedule_next(void){
+	conexion_con_suse = conectarse_a_suse();
+	int offset = 0;
+	void* buffer = malloc(2 * sizeof(int));
+	int opcode = SCHEDULE_NEXT;
+	int pid = getpid();
+	memcpy(buffer + offset, &opcode, sizeof(int));
+	offset += sizeof(int);
+	memcpy(buffer + offset, &pid, sizeof(int));
+	offset += sizeof(int);
+	send(conexion_con_suse, buffer, offset, MSG_WAITALL);
 	int next;
-	return ejecutar_operacion(next, SCHEDULE_NEXT);
+	recv(conexion_con_suse, &next, sizeof(int), MSG_WAITALL);
+	return next;
 }
 
 int suse_join(int tid){
-	return ejecutar_operacion(tid, JOIN);
+	conexion_con_suse = conectarse_a_suse();
+	int offset = 0;
+	void* buffer = malloc(2 * sizeof(int));
+	int opcode = JOIN;
+	int pid = getpid();
+	memcpy(buffer + offset, &opcode, sizeof(int));
+	offset += sizeof(int);
+	memcpy(buffer + offset, &pid, sizeof(int));
+	offset += sizeof(int);
+	send(conexion_con_suse, buffer, offset, MSG_WAITALL);
+	return 0;
 }
 
 int suse_close(int tid){
@@ -45,6 +77,16 @@ static struct hilolay_operations hiloops = {
 };
 
 void hilolay_init(void){
+	conexion_con_suse = conectarse_a_suse();
+	int offset = 0;
+	void* buffer = malloc(2 * sizeof(int));
+	int opcode = INIT;
+	int pid = getpid();
+	memcpy(buffer + offset, &opcode, sizeof(int));
+	offset += sizeof(int);
+	memcpy(buffer + offset, &pid, sizeof(int));
+	offset += sizeof(int);
+	send(conexion_con_suse, buffer, offset, MSG_WAITALL);
 	init_internal(&hiloops);
 }
 

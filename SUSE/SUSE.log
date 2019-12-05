@@ -6053,3 +6053,489 @@
 [INFO] 03:10:36:381 SUSE/(3998:4004): El hilo 3 del programa 4000 llegó a NEW
 [INFO] 03:10:36:381 SUSE/(3998:4004): El hilo 3 del programa 4000 llegó a READY
 [INFO] 03:10:36:386 SUSE/(3998:4005): El hilo 1 del programa 4000 llegó a BLOCKED
+[INFO] 07:47:07:784 SUSE/(10628:10628): Se ha iniciado el servidor.
+[INFO] 07:47:11:793 SUSE/(10628:10632): El hilo 0 del programa 10631 llegó a NEW
+[INFO] 07:47:11:793 SUSE/(10628:10632): El hilo 0 del programa 10631 llegó a READY
+[INFO] 07:47:11:799 SUSE/(10628:10633): El hilo 1 del programa 10631 llegó a NEW
+[INFO] 07:47:11:799 SUSE/(10628:10633): El hilo 1 del programa 10631 llegó a READY
+[INFO] 07:47:11:805 SUSE/(10628:10634): El hilo 2 del programa 10631 llegó a NEW
+[INFO] 07:47:11:805 SUSE/(10628:10634): El hilo 2 del programa 10631 llegó a READY
+[INFO] 07:47:11:811 SUSE/(10628:10635): El hilo 3 del programa 10631 llegó a NEW
+[INFO] 07:47:11:811 SUSE/(10628:10635): El hilo 3 del programa 10631 llegó a READY
+[INFO] 07:47:11:816 SUSE/(10628:10636): El hilo 1 del programa 10631 llegó a BLOCKED
+[INFO] 07:56:51:301 SUSE/(10953:10953): Se ha iniciado el servidor.
+[INFO] 07:57:11:356 SUSE/(10953:11020): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:11:356 SUSE/(10953:11021): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:11:356 SUSE/(10953:11021): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:11:356 SUSE/(10953:11020): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:41:850 SUSE/(10953:11024): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:41:850 SUSE/(10953:11024): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:41:850 SUSE/(10953:11023): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:41:850 SUSE/(10953:11023): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:42:233 SUSE/(10953:11027): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:42:233 SUSE/(10953:11026): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:42:233 SUSE/(10953:11026): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:42:233 SUSE/(10953:11027): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:42:514 SUSE/(10953:11029): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:42:514 SUSE/(10953:11030): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:42:514 SUSE/(10953:11030): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:42:514 SUSE/(10953:11029): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:42:819 SUSE/(10953:11032): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:42:819 SUSE/(10953:11032): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:42:819 SUSE/(10953:11033): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:42:819 SUSE/(10953:11033): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:43:71 SUSE/(10953:11035): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:43:71 SUSE/(10953:11035): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:43:71 SUSE/(10953:11036): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:43:71 SUSE/(10953:11036): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:43:388 SUSE/(10953:11038): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:43:388 SUSE/(10953:11038): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:43:388 SUSE/(10953:11039): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:43:388 SUSE/(10953:11039): El hilo 0 del programa 0 llegó a READY
+[INFO] 07:57:43:715 SUSE/(10953:11042): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:43:715 SUSE/(10953:11042): El hilo 0 del programa 0 llegó a READY
+[WARNING] 07:57:43:715 SUSE/(10953:11042): Se ha alcanzado el grado máximo de multiprogramación
+[INFO] 07:57:43:716 SUSE/(10953:11041): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:43:947 SUSE/(10953:11045): El hilo 0 del programa 0 llegó a NEW
+[INFO] 07:57:43:947 SUSE/(10953:11044): El hilo 0 del programa 0 llegó a NEW
+[INFO] 08:11:51:856 SUSE/(11469:11469): Se ha iniciado el servidor.
+[INFO] 08:13:34:448 SUSE/(11551:11551): Se ha iniciado el servidor.
+[INFO] 08:14:56:538 SUSE/(11687:11687): Se ha iniciado el servidor.
+[INFO] 08:16:21:0 SUSE/(11775:11775): Se ha iniciado el servidor.
+[INFO] 08:16:24:650 SUSE/(11775:11780): El hilo 0 del programa 0 llegó a NEW
+[INFO] 08:16:24:650 SUSE/(11775:11780): El hilo 0 del programa 0 llegó a READY
+[INFO] 08:16:24:650 SUSE/(11775:11779): El hilo 0 del programa 0 llegó a NEW
+[INFO] 08:16:24:650 SUSE/(11775:11779): El hilo 0 del programa 0 llegó a READY
+[INFO] 08:16:24:655 SUSE/(11775:11781): El hilo 0 del programa 0 llegó a NEW
+[INFO] 08:16:24:655 SUSE/(11775:11781): El hilo 0 del programa 0 llegó a READY
+[INFO] 08:16:24:662 SUSE/(11775:11782): El hilo 0 del programa 0 llegó a NEW
+[INFO] 08:16:24:662 SUSE/(11775:11782): El hilo 0 del programa 0 llegó a READY
+[INFO] 08:23:24:943 SUSE/(11980:11980): Se ha iniciado el servidor.
+[INFO] 08:23:27:262 SUSE/(11980:11985): el hilo 11982 del programa 1 llegó a NEW
+[INFO] 08:23:27:262 SUSE/(11980:11984): el hilo 11982 del programa 0 llegó a NEW
+[INFO] 08:23:32:963 SUSE/(11988:11988): Se ha iniciado el servidor.
+[INFO] 08:23:35:260 SUSE/(11988:11992): el hilo 11990 del programa 0 llegó a NEW
+[INFO] 08:27:13:968 SUSE/(12116:12116): Se ha iniciado el servidor.
+[INFO] 08:27:16:360 SUSE/(12116:12120): el hilo 12118 del programa 0 llegó a NEW
+[INFO] 08:27:16:360 SUSE/(12116:12121): el hilo 12118 del programa 1 llegó a NEW
+[INFO] 08:28:32:333 SUSE/(12201:12201): Se ha iniciado el servidor.
+[INFO] 08:28:34:842 SUSE/(12201:12205): el hilo 0 del programa 12203 llegó a NEW
+[INFO] 08:32:14:811 SUSE/(12325:12325): Se ha iniciado el servidor.
+[INFO] 08:32:17:281 SUSE/(12325:12330): el hilo 1 del programa 12327 llegó a NEW
+[INFO] 08:32:23:486 SUSE/(12333:12333): Se ha iniciado el servidor.
+[INFO] 08:32:25:932 SUSE/(12333:12337): el hilo 0 del programa 12335 llegó a NEW
+[INFO] 08:33:41:347 SUSE/(12418:12418): Se ha iniciado el servidor.
+[INFO] 08:33:43:741 SUSE/(12418:12423): el hilo 1 del programa 12420 llegó a NEW
+[INFO] 08:33:43:741 SUSE/(12418:12422): el hilo 0 del programa 12420 llegó a NEW
+[INFO] 08:33:51:557 SUSE/(12436:12436): Se ha iniciado el servidor.
+[INFO] 08:33:53:362 SUSE/(12436:12440): el hilo 0 del programa 12438 llegó a NEW
+[INFO] 08:34:46:761 SUSE/(12523:12523): Se ha iniciado el servidor.
+[INFO] 08:34:49:331 SUSE/(12523:12528): el hilo 1 del programa 12525 llegó a NEW
+[INFO] 08:34:54:135 SUSE/(12531:12531): Se ha iniciado el servidor.
+[INFO] 08:34:57:926 SUSE/(12531:12535): el hilo 0 del programa 12533 llegó a NEW
+[INFO] 08:36:26:817 SUSE/(12614:12614): Se ha iniciado el servidor.
+[INFO] 08:36:29:536 SUSE/(12614:12618): el hilo 0 del programa 12616 llegó a NEW
+[INFO] 08:36:29:536 SUSE/(12614:12618): El hilo 0 del programa 0 llegó a NEW
+[INFO] 08:36:29:536 SUSE/(12614:12619): el hilo 1 del programa 12616 llegó a NEW
+[INFO] 08:36:35:490 SUSE/(12622:12622): Se ha iniciado el servidor.
+[INFO] 08:36:37:527 SUSE/(12622:12626): el hilo 0 del programa 12624 llegó a NEW
+[INFO] 08:36:37:530 SUSE/(12622:12626): El hilo 0 del programa 0 llegó a NEW
+[INFO] 08:38:00:980 SUSE/(12712:12712): Se ha iniciado el servidor.
+[INFO] 08:38:03:604 SUSE/(12712:12717): el hilo 1 del programa 12714 llegó a NEW
+[INFO] 08:38:03:604 SUSE/(12712:12717): El hilo 0 del programa 0 llegó a NEW
+[INFO] 08:38:03:604 SUSE/(12712:12716): el hilo 0 del programa 12714 llegó a NEW
+[INFO] 08:38:03:604 SUSE/(12712:12716): El hilo 0 del programa 0 llegó a NEW
+[INFO] 08:38:03:609 SUSE/(12712:12718): el hilo 2 del programa 12714 llegó a NEW
+[INFO] 08:38:03:609 SUSE/(12712:12718): El hilo 0 del programa 0 llegó a NEW
+[INFO] 08:38:03:615 SUSE/(12712:12719): el hilo 3 del programa 12714 llegó a NEW
+[INFO] 08:38:03:615 SUSE/(12712:12719): El hilo 0 del programa 0 llegó a NEW
+[INFO] 08:39:50:260 SUSE/(12828:12828): Se ha iniciado el servidor.
+[INFO] 08:39:52:918 SUSE/(12828:12833): el hilo 0 del programa 12831 llegó a NEW
+[INFO] 08:39:52:918 SUSE/(12828:12834): el hilo 1 del programa 12831 llegó a NEW
+[INFO] 08:39:52:923 SUSE/(12828:12835): el hilo 2 del programa 12831 llegó a NEW
+[INFO] 08:39:52:930 SUSE/(12828:12836): el hilo 3 del programa 12831 llegó a NEW
+[INFO] 08:40:09:356 SUSE/(12902:12902): Se ha iniciado el servidor.
+[INFO] 08:40:11:854 SUSE/(12902:12907): el hilo 1 del programa 12904 llegó a NEW
+[INFO] 08:40:11:855 SUSE/(12902:12906): el hilo 0 del programa 12904 llegó a NEW
+[INFO] 08:40:11:860 SUSE/(12902:12908): el hilo 2 del programa 12904 llegó a NEW
+[INFO] 08:40:11:865 SUSE/(12902:12909): el hilo 3 del programa 12904 llegó a NEW
+[INFO] 08:42:02:208 SUSE/(12992:12992): Se ha iniciado el servidor.
+[INFO] 08:42:04:740 SUSE/(12992:12996): el hilo 0 del programa 12994 llegó a NEW
+[INFO] 08:42:12:552 SUSE/(13004:13004): Se ha iniciado el servidor.
+[INFO] 08:42:14:694 SUSE/(13004:13008): el hilo 0 del programa 13006 llegó a NEW
+[INFO] 08:43:07:106 SUSE/(13087:13087): Se ha iniciado el servidor.
+[INFO] 08:43:09:872 SUSE/(13087:13092): el hilo 1 del programa 13089 llegó a NEW
+[INFO] 08:43:09:873 SUSE/(13087:13091): el hilo 0 del programa 13089 llegó a NEW
+[INFO] 08:43:13:935 SUSE/(13095:13095): Se ha iniciado el servidor.
+[INFO] 08:43:16:783 SUSE/(13095:13099): el hilo 0 del programa 13097 llegó a NEW
+[INFO] 08:49:28:818 SUSE/(13229:13229): Se ha iniciado el servidor.
+[INFO] 08:49:31:701 SUSE/(13229:13234): el hilo 1 del programa 13231 llegó a NEW
+[INFO] 08:49:31:701 SUSE/(13229:13233): el hilo 0 del programa 13231 llegó a NEW
+[INFO] 08:49:36:442 SUSE/(13237:13237): Se ha iniciado el servidor.
+[INFO] 08:49:39:642 SUSE/(13237:13241): el hilo 0 del programa 13239 llegó a NEW
+[INFO] 08:49:39:644 SUSE/(13237:13242): el hilo 1 del programa 13239 llegó a NEW
+[INFO] 08:49:39:644 SUSE/(13237:13243): el hilo 2 del programa 13239 llegó a NEW
+[INFO] 08:51:10:590 SUSE/(13331:13331): Se ha iniciado el servidor.
+[INFO] 08:51:13:169 SUSE/(13331:13336): el hilo 1 del programa 13333 llegó a NEW
+[INFO] 08:51:13:169 SUSE/(13331:13335): el hilo 0 del programa 13333 llegó a NEW
+[INFO] 08:51:17:500 SUSE/(13339:13339): Se ha iniciado el servidor.
+[INFO] 08:51:19:735 SUSE/(13339:13344): el hilo 1 del programa 13341 llegó a NEW
+[INFO] 08:55:08:396 SUSE/(13511:13511): Se ha iniciado el servidor.
+[INFO] 08:55:11:523 SUSE/(13511:13515): el hilo 0 del programa 13513 llegó a NEW
+[INFO] 08:55:11:523 SUSE/(13511:13515): El hilo 0 del programa 13513 llegó a READY
+[INFO] 08:55:11:523 SUSE/(13511:13516): el hilo 1 del programa 13513 llegó a NEW
+[INFO] 08:55:11:523 SUSE/(13511:13516): El hilo 1 del programa 13513 llegó a READY
+[INFO] 08:55:11:529 SUSE/(13511:13517): el hilo 2 del programa 13513 llegó a NEW
+[INFO] 08:55:11:529 SUSE/(13511:13517): El hilo 2 del programa 13513 llegó a READY
+[INFO] 08:55:11:535 SUSE/(13511:13518): el hilo 3 del programa 13513 llegó a NEW
+[INFO] 08:55:11:535 SUSE/(13511:13518): El hilo 3 del programa 13513 llegó a READY
+[INFO] 08:56:51:655 SUSE/(13616:13616): Se ha iniciado el servidor.
+[INFO] 08:56:57:177 SUSE/(13616:13623): el hilo 0 del programa 13621 llegó a NEW
+[INFO] 08:56:57:177 SUSE/(13616:13623): El hilo 0 del programa 13621 llegó a READY
+[INFO] 08:56:57:177 SUSE/(13616:13624): el hilo 1 del programa 13621 llegó a NEW
+[INFO] 08:56:57:177 SUSE/(13616:13624): El hilo 1 del programa 13621 llegó a READY
+[INFO] 08:56:57:182 SUSE/(13616:13625): el hilo 2 del programa 13621 llegó a NEW
+[INFO] 08:56:57:182 SUSE/(13616:13625): El hilo 2 del programa 13621 llegó a READY
+[INFO] 08:56:57:188 SUSE/(13616:13626): el hilo 3 del programa 13621 llegó a NEW
+[INFO] 08:56:57:189 SUSE/(13616:13626): El hilo 3 del programa 13621 llegó a READY
+[INFO] 09:21:55:119 SUSE/(14166:14166): Se ha iniciado el servidor.
+[INFO] 09:22:12:322 SUSE/(14166:14231): el hilo 0 del programa 14229 llegó a NEW
+[INFO] 09:22:12:322 SUSE/(14166:14231): El hilo 0 del programa 14229 llegó a READY
+[INFO] 09:22:12:322 SUSE/(14166:14232): el hilo 1 del programa 14229 llegó a NEW
+[INFO] 09:22:12:323 SUSE/(14166:14232): El hilo 1 del programa 14229 llegó a READY
+[INFO] 09:22:12:328 SUSE/(14166:14233): el hilo 2 del programa 14229 llegó a NEW
+[INFO] 09:22:12:328 SUSE/(14166:14233): El hilo 2 del programa 14229 llegó a READY
+[INFO] 09:22:12:334 SUSE/(14166:14234): el hilo 3 del programa 14229 llegó a NEW
+[INFO] 09:22:12:334 SUSE/(14166:14234): El hilo 3 del programa 14229 llegó a READY
+[INFO] 09:22:12:340 SUSE/(14166:14237): El hilo 1037682656 del programa 32636 llegó a EXIT.
+[INFO] 09:22:36:681 SUSE/(14240:14240): Se ha iniciado el servidor.
+[INFO] 09:22:38:777 SUSE/(14240:14244): el hilo 0 del programa 14242 llegó a NEW
+[INFO] 09:22:38:788 SUSE/(14240:14244): El hilo 0 del programa 14242 llegó a READY
+[INFO] 09:22:38:789 SUSE/(14240:14245): el hilo 1 del programa 14242 llegó a NEW
+[INFO] 09:22:38:824 SUSE/(14240:14246): el hilo 2 del programa 14242 llegó a NEW
+[INFO] 09:22:38:824 SUSE/(14240:14245): El hilo 1 del programa 14242 llegó a READY
+[INFO] 09:22:38:851 SUSE/(14240:14247): el hilo 3 del programa 14242 llegó a NEW
+[INFO] 09:22:38:851 SUSE/(14240:14246): El hilo 2 del programa 14242 llegó a READY
+[INFO] 09:22:38:862 SUSE/(14240:14247): El hilo 3 del programa 14242 llegó a READY
+[INFO] 09:22:38:863 SUSE/(14240:14250): El hilo 88086496 del programa 0 llegó a EXIT.
+[INFO] 09:23:15:329 SUSE/(14343:14343): Se ha iniciado el servidor.
+[INFO] 09:23:17:314 SUSE/(14343:14347): el hilo 0 del programa 14345 llegó a NEW
+[INFO] 09:23:17:314 SUSE/(14343:14347): El hilo 0 del programa 14345 llegó a READY
+[INFO] 09:23:17:314 SUSE/(14343:14348): el hilo 1 del programa 14345 llegó a NEW
+[INFO] 09:23:17:314 SUSE/(14343:14348): El hilo 1 del programa 14345 llegó a READY
+[INFO] 09:23:17:322 SUSE/(14343:14349): el hilo 2 del programa 14345 llegó a NEW
+[INFO] 09:23:17:322 SUSE/(14343:14349): El hilo 2 del programa 14345 llegó a READY
+[INFO] 09:23:17:327 SUSE/(14343:14350): el hilo 3 del programa 14345 llegó a NEW
+[INFO] 09:23:17:327 SUSE/(14343:14350): El hilo 3 del programa 14345 llegó a READY
+[INFO] 09:23:17:333 SUSE/(14343:14351): El hilo 0 del programa 14345 llegó a BLOCKED
+[INFO] 09:23:55:826 SUSE/(14343:14356): el hilo 1 del programa 14353 llegó a NEW
+[INFO] 09:23:55:826 SUSE/(14343:14355): el hilo 0 del programa 14353 llegó a NEW
+[INFO] 09:23:55:826 SUSE/(14343:14355): El hilo 0 del programa 14353 llegó a READY
+[INFO] 09:23:55:826 SUSE/(14343:14356): El hilo 1 del programa 14353 llegó a READY
+[INFO] 09:23:55:834 SUSE/(14343:14357): el hilo 2 del programa 14353 llegó a NEW
+[INFO] 09:23:55:834 SUSE/(14343:14357): El hilo 2 del programa 14353 llegó a READY
+[INFO] 09:23:55:841 SUSE/(14343:14358): el hilo 3 del programa 14353 llegó a NEW
+[INFO] 09:23:55:841 SUSE/(14343:14358): El hilo 3 del programa 14353 llegó a READY
+[INFO] 09:25:40:641 SUSE/(14434:14434): Se ha iniciado el servidor.
+[INFO] 09:25:48:167 SUSE/(14434:14496): el hilo 1 del programa 14493 llegó a NEW
+[INFO] 09:25:48:167 SUSE/(14434:14495): el hilo 0 del programa 14493 llegó a NEW
+[INFO] 09:25:48:167 SUSE/(14434:14495): El hilo 0 del programa 14493 llegó a READY
+[INFO] 09:25:48:167 SUSE/(14434:14496): El hilo 1 del programa 14493 llegó a READY
+[INFO] 09:25:48:173 SUSE/(14434:14497): el hilo 2 del programa 14493 llegó a NEW
+[INFO] 09:25:48:173 SUSE/(14434:14497): El hilo 2 del programa 14493 llegó a READY
+[INFO] 09:25:48:179 SUSE/(14434:14498): el hilo 3 del programa 14493 llegó a NEW
+[INFO] 09:25:48:179 SUSE/(14434:14498): El hilo 3 del programa 14493 llegó a READY
+[INFO] 09:25:48:184 SUSE/(14434:14499): El hilo 0 del programa 14493 llegó a BLOCKED
+[INFO] 09:25:55:713 SUSE/(14434:14505): el hilo 0 del programa 14503 llegó a NEW
+[INFO] 09:27:23:153 SUSE/(14548:14548): Se ha iniciado el servidor.
+[INFO] 09:27:26:623 SUSE/(14548:14553): el hilo 1 del programa 14550 llegó a NEW
+[INFO] 09:27:26:623 SUSE/(14548:14553): El hilo 1 del programa 14550 llegó a READY
+[INFO] 09:27:26:623 SUSE/(14548:14552): el hilo 0 del programa 14550 llegó a NEW
+[INFO] 09:27:26:623 SUSE/(14548:14552): El hilo 0 del programa 14550 llegó a READY
+[INFO] 09:27:26:629 SUSE/(14548:14554): el hilo 2 del programa 14550 llegó a NEW
+[INFO] 09:27:26:629 SUSE/(14548:14554): El hilo 2 del programa 14550 llegó a READY
+[INFO] 09:27:26:635 SUSE/(14548:14555): el hilo 3 del programa 14550 llegó a NEW
+[INFO] 09:27:26:635 SUSE/(14548:14555): El hilo 3 del programa 14550 llegó a READY
+[INFO] 09:27:59:278 SUSE/(14565:14565): Se ha iniciado el servidor.
+[INFO] 09:28:17:254 SUSE/(15213:15213): Se ha iniciado el servidor.
+[INFO] 09:29:09:24 SUSE/(18604:18604): Se ha iniciado el servidor.
+[INFO] 09:29:11:432 SUSE/(18604:18607): el hilo 0 del programa 18605 llegó a NEW
+[INFO] 09:29:11:432 SUSE/(18604:18607): El hilo 0 del programa 18605 llegó a READY
+[INFO] 09:29:11:432 SUSE/(18604:18608): el hilo 1 del programa 18605 llegó a NEW
+[INFO] 09:29:11:432 SUSE/(18604:18608): El hilo 1 del programa 18605 llegó a READY
+[INFO] 09:29:11:437 SUSE/(18604:18609): el hilo 2 del programa 18605 llegó a NEW
+[INFO] 09:29:11:437 SUSE/(18604:18609): El hilo 2 del programa 18605 llegó a READY
+[INFO] 09:29:11:444 SUSE/(18604:18610): el hilo 3 del programa 18605 llegó a NEW
+[INFO] 09:29:11:444 SUSE/(18604:18610): El hilo 3 del programa 18605 llegó a READY
+[INFO] 09:29:11:456 SUSE/(18604:18611): El hilo 0 del programa 18605 llegó a BLOCKED
+[INFO] 09:29:18:409 SUSE/(18604:18615): el hilo 0 del programa 18613 llegó a NEW
+[INFO] 09:29:18:409 SUSE/(18604:18616): el hilo 1 del programa 18613 llegó a NEW
+[INFO] 09:29:18:409 SUSE/(18604:18615): El hilo 0 del programa 18613 llegó a READY
+[INFO] 09:29:18:409 SUSE/(18604:18616): El hilo 1 del programa 18613 llegó a READY
+[INFO] 09:29:18:415 SUSE/(18604:18617): el hilo 2 del programa 18613 llegó a NEW
+[INFO] 09:29:18:415 SUSE/(18604:18617): El hilo 2 del programa 18613 llegó a READY
+[INFO] 09:29:18:421 SUSE/(18604:18618): el hilo 3 del programa 18613 llegó a NEW
+[INFO] 09:29:18:421 SUSE/(18604:18618): El hilo 3 del programa 18613 llegó a READY
+[INFO] 09:29:18:433 SUSE/(18604:18619): El hilo 0 del programa 18613 llegó a BLOCKED
+[INFO] 09:29:23:725 SUSE/(18604:18623): el hilo 0 del programa 18621 llegó a NEW
+[INFO] 09:29:23:725 SUSE/(18604:18624): el hilo 1 del programa 18621 llegó a NEW
+[INFO] 09:29:32:203 SUSE/(18627:18627): Se ha iniciado el servidor.
+[INFO] 09:30:04:749 SUSE/(21553:21553): Se ha iniciado el servidor.
+[INFO] 09:30:08:143 SUSE/(21651:21651): Se ha iniciado el servidor.
+[INFO] 09:30:35:152 SUSE/(24015:24015): Se ha iniciado el servidor.
+[INFO] 09:30:37:736 SUSE/(24015:24018): el hilo 0 del programa 24016 llegó a NEW
+[INFO] 09:30:37:763 SUSE/(24015:24021): el hilo 3 del programa 24016 llegó a NEW
+[INFO] 09:30:37:788 SUSE/(24015:24020): el hilo 2 del programa 24016 llegó a NEW
+[INFO] 09:30:37:788 SUSE/(24015:24019): el hilo 1 del programa 24016 llegó a NEW
+[INFO] 09:30:37:798 SUSE/(24015:24018): El hilo 0 del programa 24016 llegó a READY
+[INFO] 09:30:37:823 SUSE/(24015:24021): El hilo 3 del programa 24016 llegó a READY
+[INFO] 09:30:37:825 SUSE/(24015:24019): El hilo 1 del programa 24016 llegó a READY
+[INFO] 09:30:37:827 SUSE/(24015:24020): El hilo 2 del programa 24016 llegó a READY
+[INFO] 09:30:37:834 SUSE/(24015:24022): El hilo 0 del programa 24016 llegó a BLOCKED
+[INFO] 09:30:48:517 SUSE/(24024:24024): Se ha iniciado el servidor.
+[INFO] 09:30:50:875 SUSE/(24024:24032): el hilo 3 del programa 24027 llegó a NEW
+[INFO] 09:30:50:877 SUSE/(24024:24029): el hilo 0 del programa 24027 llegó a NEW
+[INFO] 09:30:50:878 SUSE/(24024:24030): el hilo 1 del programa 24027 llegó a NEW
+[INFO] 09:30:50:878 SUSE/(24024:24031): el hilo 2 del programa 24027 llegó a NEW
+[INFO] 09:30:50:883 SUSE/(24024:24032): El hilo 3 del programa 24027 llegó a READY
+[INFO] 09:30:50:887 SUSE/(24024:24030): El hilo 1 del programa 24027 llegó a READY
+[INFO] 09:30:50:888 SUSE/(24024:24029): El hilo 0 del programa 24027 llegó a READY
+[INFO] 09:30:50:891 SUSE/(24024:24031): El hilo 2 del programa 24027 llegó a READY
+[INFO] 09:30:50:899 SUSE/(24024:24040): El hilo 88086496 del programa 0 llegó a EXIT.
+[INFO] 09:32:10:314 SUSE/(24118:24118): Se ha iniciado el servidor.
+[INFO] 09:32:13:494 SUSE/(24118:24122): el hilo 1 del programa 24119 llegó a NEW
+[INFO] 09:32:13:494 SUSE/(24118:24122): El hilo 1 del programa 24119 llegó a READY
+[INFO] 09:32:13:494 SUSE/(24118:24121): el hilo 0 del programa 24119 llegó a NEW
+[INFO] 09:32:13:494 SUSE/(24118:24121): El hilo 0 del programa 24119 llegó a READY
+[INFO] 09:32:13:500 SUSE/(24118:24123): el hilo 2 del programa 24119 llegó a NEW
+[INFO] 09:32:13:500 SUSE/(24118:24123): El hilo 2 del programa 24119 llegó a READY
+[INFO] 09:32:13:506 SUSE/(24118:24124): el hilo 3 del programa 24119 llegó a NEW
+[INFO] 09:32:13:506 SUSE/(24118:24124): El hilo 3 del programa 24119 llegó a READY
+[INFO] 09:32:13:511 SUSE/(24118:24132): El hilo -51656736 del programa 32544 llegó a EXIT.
+[INFO] 09:33:03:183 SUSE/(24209:24209): Se ha iniciado el servidor.
+[INFO] 09:33:05:229 SUSE/(24209:24212): el hilo 0 del programa 24210 llegó a NEW
+[INFO] 09:33:09:499 SUSE/(24216:24216): Se ha iniciado el servidor.
+[INFO] 09:33:17:543 SUSE/(24621:24621): Se ha iniciado el servidor.
+[INFO] 09:33:20:716 SUSE/(24727:24727): Se ha iniciado el servidor.
+[INFO] 09:33:28:440 SUSE/(24930:24930): Se ha iniciado el servidor.
+[INFO] 09:33:37:823 SUSE/(25301:25301): Se ha iniciado el servidor.
+[INFO] 09:33:48:258 SUSE/(25773:25773): Se ha iniciado el servidor.
+[INFO] 09:34:03:881 SUSE/(26481:26481): Se ha iniciado el servidor.
+[INFO] 09:34:10:241 SUSE/(26588:26588): Se ha iniciado el servidor.
+[INFO] 09:34:15:193 SUSE/(26588:26593): el hilo 1 del programa 26590 llegó a NEW
+[INFO] 09:34:15:196 SUSE/(26588:26595): el hilo 3 del programa 26590 llegó a NEW
+[INFO] 09:34:15:201 SUSE/(26588:26595): El hilo 3 del programa 26590 llegó a READY
+[INFO] 09:34:15:202 SUSE/(26588:26593): El hilo 1 del programa 26590 llegó a READY
+[INFO] 09:34:15:203 SUSE/(26588:26592): el hilo 0 del programa 26590 llegó a NEW
+[INFO] 09:34:15:204 SUSE/(26588:26592): El hilo 0 del programa 26590 llegó a READY
+[INFO] 09:34:15:203 SUSE/(26588:26594): el hilo 2 del programa 26590 llegó a NEW
+[INFO] 09:34:15:205 SUSE/(26588:26594): El hilo 2 del programa 26590 llegó a READY
+[INFO] 09:34:15:214 SUSE/(26588:26596): El hilo 0 del programa 26590 llegó a BLOCKED
+[INFO] 09:34:15:217 SUSE/(26588:26603): El hilo 88086496 del programa 0 llegó a EXIT.
+[INFO] 09:34:15:219 SUSE/(26588:26603): El hilo 0 del programa 26590 llegó a READY
+[INFO] 09:37:24:329 SUSE/(26701:26701): Se ha iniciado el servidor.
+[INFO] 09:37:40:911 SUSE/(26701:26763): el hilo 1 del programa 26760 llegó a NEW
+[INFO] 09:37:40:911 SUSE/(26701:26762): el hilo 0 del programa 26760 llegó a NEW
+[INFO] 09:37:40:911 SUSE/(26701:26762): El hilo 0 del programa 26760 llegó a READY
+[INFO] 09:37:47:265 SUSE/(26766:26766): Se ha iniciado el servidor.
+[INFO] 09:38:01:211 SUSE/(27226:27226): Se ha iniciado el servidor.
+[INFO] 09:38:18:838 SUSE/(27701:27701): Se ha iniciado el servidor.
+[INFO] 09:43:01:628 SUSE/(28618:28618): Se ha iniciado el servidor.
+[INFO] 09:43:12:111 SUSE/(28618:28679): el hilo 1 del programa 28676 llegó a NEW
+[INFO] 09:43:16:331 SUSE/(28682:28682): Se ha iniciado el servidor.
+[INFO] 09:44:14:326 SUSE/(29202:29202): Se ha iniciado el servidor.
+[INFO] 09:44:26:19 SUSE/(29202:29206): el hilo 0 del programa 29204 llegó a NEW
+[INFO] 09:44:26:19 SUSE/(29202:29206): El hilo 0 del programa 29204 llegó a READY
+[INFO] 09:44:26:19 SUSE/(29202:29207): el hilo 1 del programa 29204 llegó a NEW
+[INFO] 09:44:26:19 SUSE/(29202:29207): El hilo 1 del programa 29204 llegó a READY
+[INFO] 09:44:26:24 SUSE/(29202:29208): el hilo 2 del programa 29204 llegó a NEW
+[INFO] 09:44:26:24 SUSE/(29202:29208): El hilo 2 del programa 29204 llegó a READY
+[INFO] 09:44:26:30 SUSE/(29202:29209): el hilo 3 del programa 29204 llegó a NEW
+[INFO] 09:44:26:30 SUSE/(29202:29209): El hilo 3 del programa 29204 llegó a READY
+[INFO] 09:44:26:41 SUSE/(29202:29210): El hilo 0 del programa 29204 llegó a BLOCKED
+[INFO] 09:44:35:349 SUSE/(29202:29216): el hilo 1 del programa 29213 llegó a NEW
+[INFO] 09:44:40:741 SUSE/(29220:29220): Se ha iniciado el servidor.
+[INFO] 09:45:21:64 SUSE/(29548:29548): Se ha iniciado el servidor.
+[INFO] 09:47:42:321 SUSE/(30015:30015): Se ha iniciado el servidor.
+[INFO] 09:47:57:408 SUSE/(30015:30078): el hilo 0 del programa 30076 llegó a NEW
+[INFO] 09:47:57:415 SUSE/(30015:30078): El hilo 0 del programa 30076 llegó a READY
+[INFO] 09:47:57:416 SUSE/(30015:30079): el hilo 1 del programa 30076 llegó a NEW
+[INFO] 09:47:57:417 SUSE/(30015:30079): El hilo 1 del programa 30076 llegó a READY
+[INFO] 09:47:57:417 SUSE/(30015:30081): el hilo 3 del programa 30076 llegó a NEW
+[INFO] 09:47:57:417 SUSE/(30015:30081): El hilo 3 del programa 30076 llegó a READY
+[INFO] 09:47:57:418 SUSE/(30015:30080): el hilo 2 del programa 30076 llegó a NEW
+[INFO] 09:47:57:418 SUSE/(30015:30080): El hilo 2 del programa 30076 llegó a READY
+[INFO] 09:48:04:517 SUSE/(30015:30082): El hilo 0 del programa 30076 llegó a BLOCKED
+[INFO] 09:48:13:53 SUSE/(30015:30087): el hilo 0 del programa 30085 llegó a NEW
+[INFO] 09:53:31:194 SUSE/(30283:30283): Se ha iniciado el servidor.
+[INFO] 09:53:34:184 SUSE/(30283:30286): el hilo 0 del programa 30284 llegó a NEW
+[INFO] 09:59:40:269 SUSE/(30899:30899): Se ha iniciado el servidor.
+[INFO] 09:59:48:194 SUSE/(30906:30906): Se ha iniciado el servidor.
+[INFO] 10:00:25:916 SUSE/(30980:30980): Se ha iniciado el servidor.
+[INFO] 10:00:38:551 SUSE/(31047:31047): Se ha iniciado el servidor.
+[INFO] 10:00:40:651 SUSE/(31047:31051): el hilo 1 del programa 31048 llegó a NEW
+[INFO] 10:00:45:109 SUSE/(31054:31054): Se ha iniciado el servidor.
+[INFO] 10:02:14:636 SUSE/(31392:31392): Se ha iniciado el servidor.
+[INFO] 10:02:17:403 SUSE/(31392:31396): el hilo 1 del programa 31393 llegó a NEW
+[INFO] 10:02:17:403 SUSE/(31392:31395): el hilo 0 del programa 31393 llegó a NEW
+[INFO] 10:02:22:413 SUSE/(31399:31399): Se ha iniciado el servidor.
+[INFO] 10:02:28:245 SUSE/(31653:31653): Se ha iniciado el servidor.
+[INFO] 10:02:31:864 SUSE/(31743:31743): Se ha iniciado el servidor.
+[INFO] 10:02:38:165 SUSE/(32009:32009): Se ha iniciado el servidor.
+[INFO] 10:02:43:971 SUSE/(32218:32218): Se ha iniciado el servidor.
+[INFO] 10:02:53:998 SUSE/(32553:32553): Se ha iniciado el servidor.
+[INFO] 10:03:02:481 SUSE/(32647:32647): Se ha iniciado el servidor.
+[INFO] 10:03:13:857 SUSE/(643:643): Se ha iniciado el servidor.
+[INFO] 10:03:32:141 SUSE/(2165:2165): Se ha iniciado el servidor.
+[INFO] 10:03:40:939 SUSE/(2165:2200): el hilo 0 del programa 2198 llegó a NEW
+[INFO] 10:06:07:931 SUSE/(2405:2405): Se ha iniciado el servidor.
+[INFO] 10:06:10:460 SUSE/(2405:2409): el hilo 1 del programa 2406 llegó a NEW
+[INFO] 10:06:14:821 SUSE/(2412:2412): Se ha iniciado el servidor.
+[INFO] 10:06:25:462 SUSE/(2837:2837): Se ha iniciado el servidor.
+[INFO] 10:06:36:297 SUSE/(3519:3519): Se ha iniciado el servidor.
+[INFO] 10:06:41:45 SUSE/(3761:3761): Se ha iniciado el servidor.
+[INFO] 10:06:46:256 SUSE/(3984:3984): Se ha iniciado el servidor.
+[INFO] 10:07:01:255 SUSE/(4609:4609): Se ha iniciado el servidor.
+[INFO] 10:07:09:772 SUSE/(4793:4793): Se ha iniciado el servidor.
+[INFO] 10:07:27:998 SUSE/(5701:5701): Se ha iniciado el servidor.
+[INFO] 10:07:30:153 SUSE/(5701:5705): el hilo 1 del programa 5702 llegó a NEW
+[INFO] 10:10:58:188 SUSE/(5799:5799): Se ha iniciado el servidor.
+[INFO] 10:11:10:824 SUSE/(5799:5828): el hilo 1 del programa 5825 llegó a NEW
+[INFO] 10:11:27:972 SUSE/(5905:5905): Se ha iniciado el servidor.
+[INFO] 10:11:30:829 SUSE/(5905:5908): el hilo 0 del programa 5906 llegó a NEW
+[INFO] 10:11:36:379 SUSE/(5912:5912): Se ha iniciado el servidor.
+[INFO] 10:11:38:359 SUSE/(5912:5917): el hilo 2 del programa 5913 llegó a NEW
+[INFO] 10:11:38:361 SUSE/(5912:5915): el hilo 0 del programa 5913 llegó a NEW
+[INFO] 10:11:38:361 SUSE/(5912:5916): el hilo 1 del programa 5913 llegó a NEW
+[INFO] 10:11:38:362 SUSE/(5912:5918): el hilo 3 del programa 5913 llegó a NEW
+[INFO] 10:12:59:109 SUSE/(5997:5997): Se ha iniciado el servidor.
+[INFO] 10:13:00:854 SUSE/(5997:6000): el hilo 0 del programa 5998 llegó a NEW
+[INFO] 10:13:00:854 SUSE/(5997:6001): el hilo 1 del programa 5998 llegó a NEW
+[INFO] 10:22:55:1 SUSE/(6185:6185): Se ha iniciado el servidor.
+[INFO] 10:23:00:849 SUSE/(6185:6189): el hilo 1 del programa 6186 llegó a NEW
+[INFO] 10:23:10:757 SUSE/(6252:6252): Se ha iniciado el servidor.
+[INFO] 10:23:12:762 SUSE/(6252:6256): el hilo 1 del programa 6253 llegó a NEW
+[INFO] 10:23:12:764 SUSE/(6252:6257): el hilo 2 del programa 6253 llegó a NEW
+[INFO] 10:23:12:765 SUSE/(6252:6255): el hilo 0 del programa 6253 llegó a NEW
+[INFO] 10:24:53:822 SUSE/(6343:6343): Se ha iniciado el servidor.
+[INFO] 10:24:58:569 SUSE/(6343:6346): el hilo 0 del programa 6344 llegó a NEW
+[INFO] 10:24:58:572 SUSE/(6343:6349): el hilo 3 del programa 6344 llegó a NEW
+[INFO] 10:24:58:573 SUSE/(6343:6348): el hilo 2 del programa 6344 llegó a NEW
+[INFO] 10:24:58:573 SUSE/(6343:6347): el hilo 1 del programa 6344 llegó a NEW
+[INFO] 10:25:57:284 SUSE/(6430:6430): Se ha iniciado el servidor.
+[INFO] 10:25:59:944 SUSE/(6430:6434): el hilo 1 del programa 6431 llegó a NEW
+[INFO] 10:27:08:699 SUSE/(6515:6515): Se ha iniciado el servidor.
+[INFO] 10:27:11:39 SUSE/(6515:6518): el hilo 0 del programa 6516 llegó a NEW
+[INFO] 10:27:11:39 SUSE/(6515:6519): el hilo 1 del programa 6516 llegó a NEW
+[INFO] 10:27:24:807 SUSE/(6522:6522): Se ha iniciado el servidor.
+[INFO] 10:27:26:928 SUSE/(6522:6526): el hilo 1 del programa 6523 llegó a NEW
+[INFO] 10:27:54:611 SUSE/(6606:6606): Se ha iniciado el servidor.
+[INFO] 10:27:56:764 SUSE/(6606:6610): el hilo 0 del programa 6608 llegó a NEW
+[INFO] 10:27:56:764 SUSE/(6606:6611): el hilo 1 del programa 6608 llegó a NEW
+[INFO] 10:31:25:162 SUSE/(6733:6733): Se ha iniciado el servidor.
+[INFO] 10:31:27:111 SUSE/(6733:6736): el hilo 0 del programa 6734 llegó a NEW
+[INFO] 10:31:27:111 SUSE/(6733:6737): el hilo 1 del programa 6734 llegó a NEW
+[INFO] 10:31:36:334 SUSE/(6740:6740): Se ha iniciado el servidor.
+[INFO] 10:31:38:731 SUSE/(6740:6744): el hilo 1 del programa 6741 llegó a NEW
+[INFO] 10:34:10:529 SUSE/(6872:6872): Se ha iniciado el servidor.
+[INFO] 10:34:12:739 SUSE/(6872:6875): el hilo 0 del programa 6873 llegó a NEW
+[INFO] 10:34:23:77 SUSE/(6881:6881): Se ha iniciado el servidor.
+[INFO] 10:34:24:785 SUSE/(6881:6885): el hilo 1 del programa 6882 llegó a NEW
+[INFO] 10:34:24:791 SUSE/(6881:6884): el hilo 0 del programa 6882 llegó a NEW
+[INFO] 10:34:24:791 SUSE/(6881:6886): el hilo 2 del programa 6882 llegó a NEW
+[INFO] 10:35:12:798 SUSE/(6992:6992): Se ha iniciado el servidor.
+[INFO] 10:35:15:47 SUSE/(6992:6995): el hilo 0 del programa 6993 llegó a NEW
+[INFO] 10:35:20:273 SUSE/(7000:7000): Se ha iniciado el servidor.
+[INFO] 10:35:22:399 SUSE/(7000:7004): el hilo 0 del programa 7001 llegó a NEW
+[INFO] 10:37:37:908 SUSE/(7153:7153): Se ha iniciado el servidor.
+[INFO] 10:37:40:12 SUSE/(7153:7156): el hilo 0 del programa 7154 llegó a NEW
+[INFO] 10:37:40:12 SUSE/(7153:7157): el hilo 1 del programa 7154 llegó a NEW
+[INFO] 10:37:53:214 SUSE/(7256:7256): Se ha iniciado el servidor.
+[INFO] 10:37:55:65 SUSE/(7256:7259): el hilo 0 del programa 7257 llegó a NEW
+[INFO] 10:38:50:476 SUSE/(7363:7363): Se ha iniciado el servidor.
+[INFO] 10:38:52:655 SUSE/(7363:7366): el hilo 0 del programa 7364 llegó a NEW
+[INFO] 10:38:52:655 SUSE/(7363:7367): el hilo 1 del programa 7364 llegó a NEW
+[INFO] 10:39:01:919 SUSE/(7370:7370): Se ha iniciado el servidor.
+[INFO] 10:39:04:48 SUSE/(7370:7375): el hilo 1 del programa 7372 llegó a NEW
+[INFO] 10:39:04:53 SUSE/(7370:7374): el hilo 0 del programa 7372 llegó a NEW
+[INFO] 10:44:00:720 SUSE/(7541:7541): Se ha iniciado el servidor.
+[INFO] 10:44:02:856 SUSE/(7541:7545): el hilo 0 del programa 7543 llegó a NEW
+[INFO] 10:44:02:856 SUSE/(7541:7546): el hilo 1 del programa 7543 llegó a NEW
+[INFO] 10:45:01:296 SUSE/(7612:7612): Se ha iniciado el servidor.
+[INFO] 10:45:03:574 SUSE/(7612:7615): el hilo 0 del programa 7613 llegó a NEW
+[INFO] 10:48:44:473 SUSE/(7757:7757): Se ha iniciado el servidor.
+[INFO] 10:48:47:776 SUSE/(7757:7761): el hilo 1 del programa 7758 llegó a NEW
+[INFO] 10:49:48:357 SUSE/(7775:7775): Se ha iniciado el servidor.
+[INFO] 10:49:50:388 SUSE/(7775:7778): el hilo 0 del programa 7776 llegó a NEW
+[INFO] 11:01:51:153 SUSE/(8195:8195): Se ha iniciado el servidor.
+[INFO] 11:01:53:785 SUSE/(8195:8199): el hilo 1 del programa 8196 llegó a NEW
+[INFO] 11:01:58:154 SUSE/(8202:8202): Se ha iniciado el servidor.
+[INFO] 11:02:00:59 SUSE/(8202:8205): el hilo 0 del programa 8203 llegó a NEW
+[INFO] 11:03:58:839 SUSE/(8302:8302): Se ha iniciado el servidor.
+[INFO] 11:04:01:147 SUSE/(8302:8306): el hilo 1 del programa 8303 llegó a NEW
+[INFO] 11:07:10:842 SUSE/(8397:8397): Se ha iniciado el servidor.
+[INFO] 11:07:12:6 SUSE/(8397:8401): el hilo 1 del programa 8398 llegó a NEW
+[INFO] 11:07:12:6 SUSE/(8397:8400): el hilo 0 del programa 8398 llegó a NEW
+[INFO] 11:07:13:11 SUSE/(8397:8402): el hilo 2 del programa 8398 llegó a NEW
+[INFO] 11:07:13:17 SUSE/(8397:8403): el hilo 3 del programa 8398 llegó a NEW
+[INFO] 11:08:34:61 SUSE/(8657:8657): Se ha iniciado el servidor.
+[INFO] 11:08:36:339 SUSE/(8657:8743): el hilo 0 del programa 8741 llegó a NEW
+[INFO] 11:08:36:339 SUSE/(8657:8743): El hilo 0 del programa 8741 llegó a READY
+[INFO] 11:08:36:339 SUSE/(8657:8744): el hilo 1 del programa 8741 llegó a NEW
+[INFO] 11:08:36:339 SUSE/(8657:8744): El hilo 1 del programa 8741 llegó a READY
+[INFO] 11:08:36:346 SUSE/(8657:8745): el hilo 2 del programa 8741 llegó a NEW
+[INFO] 11:08:36:346 SUSE/(8657:8745): El hilo 2 del programa 8741 llegó a READY
+[INFO] 11:08:36:352 SUSE/(8657:8746): el hilo 3 del programa 8741 llegó a NEW
+[INFO] 11:08:36:352 SUSE/(8657:8746): El hilo 3 del programa 8741 llegó a READY
+[INFO] 11:09:21:797 SUSE/(8774:8774): Se ha iniciado el servidor.
+[INFO] 11:09:25:537 SUSE/(8774:8778): el hilo 1 del programa 8775 llegó a NEW
+[INFO] 11:09:25:537 SUSE/(8774:8778): El hilo 1 del programa 8775 llegó a READY
+[INFO] 11:09:25:537 SUSE/(8774:8777): el hilo 0 del programa 8775 llegó a NEW
+[INFO] 11:09:25:537 SUSE/(8774:8777): El hilo 0 del programa 8775 llegó a READY
+[INFO] 11:09:25:543 SUSE/(8774:8779): el hilo 2 del programa 8775 llegó a NEW
+[INFO] 11:09:25:543 SUSE/(8774:8779): El hilo 2 del programa 8775 llegó a READY
+[INFO] 11:09:25:548 SUSE/(8774:8780): el hilo 3 del programa 8775 llegó a NEW
+[INFO] 11:09:25:549 SUSE/(8774:8780): El hilo 3 del programa 8775 llegó a READY
+[INFO] 11:09:37:887 SUSE/(8774:8795): el hilo 0 del programa 8793 llegó a NEW
+[INFO] 11:09:37:887 SUSE/(8774:8796): el hilo 1 del programa 8793 llegó a NEW
+[INFO] 11:09:37:887 SUSE/(8774:8795): El hilo 0 del programa 8793 llegó a READY
+[INFO] 11:09:37:887 SUSE/(8774:8796): El hilo 1 del programa 8793 llegó a READY
+[INFO] 11:09:37:892 SUSE/(8774:8797): el hilo 2 del programa 8793 llegó a NEW
+[INFO] 11:09:37:892 SUSE/(8774:8797): El hilo 2 del programa 8793 llegó a READY
+[INFO] 11:09:37:899 SUSE/(8774:8798): el hilo 3 del programa 8793 llegó a NEW
+[INFO] 11:09:37:899 SUSE/(8774:8798): El hilo 3 del programa 8793 llegó a READY
+[INFO] 11:11:51:860 SUSE/(8889:8889): Se ha iniciado el servidor.
+[INFO] 11:11:58:206 SUSE/(8889:8893): el hilo 1 del programa 8890 llegó a NEW
+[INFO] 11:11:58:206 SUSE/(8889:8893): El hilo 1 del programa 8890 llegó a READY
+[INFO] 11:11:58:206 SUSE/(8889:8892): el hilo 0 del programa 8890 llegó a NEW
+[INFO] 11:11:58:206 SUSE/(8889:8892): El hilo 0 del programa 8890 llegó a READY
+[INFO] 11:11:58:212 SUSE/(8889:8894): el hilo 2 del programa 8890 llegó a NEW
+[INFO] 11:11:58:212 SUSE/(8889:8894): El hilo 2 del programa 8890 llegó a READY
+[INFO] 11:11:58:218 SUSE/(8889:8895): el hilo 3 del programa 8890 llegó a NEW
+[INFO] 11:11:58:218 SUSE/(8889:8895): El hilo 3 del programa 8890 llegó a READY
+[INFO] 11:14:07:627 SUSE/(8982:8982): Se ha iniciado el servidor.
+[INFO] 11:14:10:620 SUSE/(9027:9027): Se ha iniciado el servidor.
+[INFO] 11:15:43:689 SUSE/(9489:9489): Se ha iniciado el servidor.
+[INFO] 11:15:46:178 SUSE/(9489:9493): el hilo 1 del programa 9490 llegó a NEW
+[INFO] 11:15:46:178 SUSE/(9489:9493): El hilo 1 del programa 9490 llegó a READY
+[INFO] 11:15:46:178 SUSE/(9489:9492): el hilo 0 del programa 9490 llegó a NEW
+[INFO] 11:15:46:178 SUSE/(9489:9492): El hilo 0 del programa 9490 llegó a READY
+[INFO] 11:15:46:183 SUSE/(9489:9494): el hilo 2 del programa 9490 llegó a NEW
+[INFO] 11:15:46:183 SUSE/(9489:9494): El hilo 2 del programa 9490 llegó a READY
+[INFO] 11:15:46:189 SUSE/(9489:9495): el hilo 3 del programa 9490 llegó a NEW
+[INFO] 11:15:46:189 SUSE/(9489:9495): El hilo 3 del programa 9490 llegó a READY
+[INFO] 11:17:13:246 SUSE/(9578:9578): Se ha iniciado el servidor.
+[INFO] 11:17:18:81 SUSE/(9641:9641): Se ha iniciado el servidor.
+[INFO] 11:17:31:299 SUSE/(10215:10215): Se ha iniciado el servidor.
+[INFO] 11:17:38:504 SUSE/(10443:10443): Se ha iniciado el servidor.
+[INFO] 11:17:44:517 SUSE/(10771:10771): Se ha iniciado el servidor.
+[INFO] 11:17:53:547 SUSE/(11199:11199): Se ha iniciado el servidor.
+[INFO] 11:18:22:317 SUSE/(12833:12833): Se ha iniciado el servidor.
+[INFO] 11:18:24:153 SUSE/(12833:12836): el hilo 0 del programa 12834 llegó a NEW
+[INFO] 11:18:24:160 SUSE/(12833:12836): El hilo 0 del programa 12834 llegó a READY
+[INFO] 11:18:24:185 SUSE/(12833:12837): el hilo 1 del programa 12834 llegó a NEW
+[INFO] 11:18:24:186 SUSE/(12833:12837): El hilo 1 del programa 12834 llegó a READY
+[INFO] 11:18:24:186 SUSE/(12833:12838): el hilo 2 del programa 12834 llegó a NEW
+[INFO] 11:18:24:187 SUSE/(12833:12838): El hilo 2 del programa 12834 llegó a READY
+[INFO] 11:18:24:190 SUSE/(12833:12839): el hilo 3 del programa 12834 llegó a NEW
+[INFO] 11:18:24:191 SUSE/(12833:12839): El hilo 3 del programa 12834 llegó a READY

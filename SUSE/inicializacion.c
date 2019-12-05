@@ -21,14 +21,17 @@ void inicializar() {
 	cola_blocked = queue_create();
 	cola_exit = queue_create();
 
-	tid_sem = malloc(sizeof(sem_t));
-	sem_init(tid_sem, 0 , 1);
+	//multiprogramacion_sem = malloc(sizeof(sem_t));
+	sem_init(&multiprogramacion_sem, 0, 1);
 
-	pid_sem = malloc(sizeof(sem_t));
-	sem_init(pid_sem, 0, 1);
+	//atender_clientes_sem = malloc(sizeof(sem_t));
+	sem_init(&atender_clientes_sem, 0, 20);
 
-	multiprogramacion_sem = malloc(sizeof(sem_t));
-	sem_init(multiprogramacion_sem, 0, 1);
+	//cola_new_sem = malloc(sizeof(sem_t));
+	sem_init(&cola_new_sem, 0, 1);
 
-	sem_value = malloc(sizeof(sem_value_t));
+	//cola_ready_sem = malloc(sizeof(sem_t));
+	sem_init(&cola_ready_sem, 0, 1);
+
+	//sem_value = malloc(sizeof(sem_value_t));
 }

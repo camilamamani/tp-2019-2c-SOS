@@ -35,6 +35,9 @@ t_queue* cola_exit;
 sem_t* tid_sem;
 sem_t* pid_sem;
 sem_t* multiprogramacion_sem;
+sem_t* atender_clientes_sem;
+sem_t* cola_new_sem;
+sem_t* cola_ready_sem;
 
 sem_value_t* sem_value;
 
